@@ -32,9 +32,21 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Normal|AnyCPU'">
+    <OutputPath>bin\Normal\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FlatUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CarsonGamesGeosCvRevamp\CarsonGamesGeos\DLL\FlatUI.dll</HintPath>
+    </Reference>
+    <Reference Include="JDragControl">
+      <HintPath>..\..\CarsonGamesGeosCvRevamp\CarsonGamesGeos\DLL\JDragControl.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,11 +55,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dev\debug.cs" />
+    <Compile Include="MainForms\GUI Items\Message Box\MessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\GUI Items\Message Box\MessageBox.Designer.cs">
+      <DependentUpon>MessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\UserControls\Titlebar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\UserControls\Titlebar.Designer.cs">
+      <DependentUpon>Titlebar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MainResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainResources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="MainResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\GUI Items\Message Box\MessageBox.resx">
+      <DependentUpon>MessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\UserControls\Titlebar.resx">
+      <DependentUpon>Titlebar.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\title.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
