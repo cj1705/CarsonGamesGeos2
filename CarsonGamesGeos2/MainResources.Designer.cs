@@ -61,6 +61,16 @@ namespace CarsonGamesGeos2 {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BOOT {
+            get {
+                object obj = ResourceManager.GetObject("BOOT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to *********************************
         ///Carson Games Geos 2
         ///Debug Mode

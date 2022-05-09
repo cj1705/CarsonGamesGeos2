@@ -12,6 +12,7 @@ namespace CarsonGamesGeos2.Main
 {
     public partial class MainForm : Form
     {
+        classes.WindowControls WindowControls = new classes.WindowControls();
         public MainForm()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace CarsonGamesGeos2.Main
         private void MainForm_Load(object sender, EventArgs e)
         {
 #if DEBUG
-            OpenForm(new dev.GUI.Debug_Menu.Main());
+            WindowControls.Open(new dev.GUI.Debug_Menu.Main(),"window");
 #endif
         }
         public void OpenForm(Form a)
@@ -30,15 +31,7 @@ namespace CarsonGamesGeos2.Main
                 {
         
                   
-                        Form form = a;
-                        a.TopLevel = false;
-                        a.Parent = this;
-
-
-                        a.Show();
-                        a.BringToFront();
-
-                        a.StartPosition = FormStartPosition.CenterScreen;
+                       
                     
                 }
                 catch (Exception ex)

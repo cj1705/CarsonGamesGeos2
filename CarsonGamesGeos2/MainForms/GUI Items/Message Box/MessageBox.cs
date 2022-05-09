@@ -23,8 +23,8 @@ namespace CarsonGamesGeos2.Main.GUI_Items.Message_Box
             InitializeComponent();
 
             richTextBox1.Text = ParseString(text);
-            jDragControl1.TargetControl = titlebar1.panel1;
-            jDragControl1.GetForm = this;
+            //jDragControl1.TargetControl = titlebar1.panel1;
+        //    jDragControl1.GetForm = this;
         
         }
 

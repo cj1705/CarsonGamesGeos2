@@ -32,7 +32,7 @@
             this.titlebar1 = new CarsonGamesGeos.geos.UserControls.UI.Titlebar();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.jDragControl1 = new JDragControl.JDragControl(this.components);
+       //     this.jDragControl1 = new JDragControl.JDragControl(this.components);
             this.SuspendLayout();
             // 
             // titlebar1
@@ -64,8 +64,8 @@
             // 
             // jDragControl1
             // 
-            this.jDragControl1.GetForm = this;
-            this.jDragControl1.TargetControl = this.button1;
+           // this.jDragControl1.GetForm = this;
+            //this.jDragControl1.TargetControl = this.button1;
             // 
             // MessageBox
             // 
@@ -90,6 +90,6 @@
         private CarsonGamesGeos.geos.UserControls.UI.Titlebar titlebar1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button1;
-        private JDragControl.JDragControl jDragControl1;
+        //private JDragControl.JDragControl jDragControl1;
     }
 }

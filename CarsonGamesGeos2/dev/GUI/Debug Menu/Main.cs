@@ -12,6 +12,7 @@ namespace CarsonGamesGeos2.dev.GUI.Debug_Menu
 {
     public partial class Main : Form
     {
+        classes.WindowControls WindowControls = new classes.WindowControls();
         public Main()
         {
             InitializeComponent();
@@ -20,6 +21,12 @@ namespace CarsonGamesGeos2.dev.GUI.Debug_Menu
         private void Main_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainForms.Misc_Forms.Loading.Main loading = new MainForms.Misc_Forms.Loading.Main();
+            WindowControls.Open(loading,"full");
         }
     }
 }
