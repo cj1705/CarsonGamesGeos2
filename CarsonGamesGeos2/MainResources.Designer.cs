@@ -63,9 +63,9 @@ namespace CarsonGamesGeos2 {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BOOT {
+        internal static System.Drawing.Bitmap CGGeosLogo2 {
             get {
-                object obj = ResourceManager.GetObject("BOOT", resourceCulture);
+                object obj = ResourceManager.GetObject("CGGeosLogo2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

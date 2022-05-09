@@ -16,12 +16,20 @@ namespace CarsonGamesGeos2.MainForms.Misc_Forms.Loading
         public Main()
         {
             InitializeComponent();
-            pictureBox1.Image = MainResources.BOOT;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            pictureBox1.Image = animations.ChangeOpacity(MainResources.BOOT, 100);
+            pictureBox1.Image = animations.ChangeOpacity(MainResources.CGGeosLogo2, 100);
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            Point p = new Point();
+            p.X = Size.Width / 2;
+            p.Y = Size.Height / 2;
+
+            pictureBox1.Location = new Point((this.Width / 2) - (pictureBox1.Width / 2), (this.Height / 2) - (pictureBox1.Height / 2));
         }
     }
 }

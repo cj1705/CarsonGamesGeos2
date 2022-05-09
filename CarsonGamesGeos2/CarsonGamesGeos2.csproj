@@ -96,9 +96,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BOOT.bmp" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="dev\GUI\Debug Menu\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +121,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DLLS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CGGeosLogo-_7_.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CGGeosLogo2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

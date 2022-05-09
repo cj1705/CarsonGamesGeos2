@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace CarsonGamesGeos2.classes
 {
-    internal class WindowControls
+    public class WindowControls
     {
         public void Open(Form form, string size)
         {
@@ -18,7 +18,8 @@ namespace CarsonGamesGeos2.classes
 
             if(size == "full")
             {
-                form.Size = main.Size;
+               
+                form.Size = main.ClientSize;
             }
             form.Show();
             form.BringToFront();
