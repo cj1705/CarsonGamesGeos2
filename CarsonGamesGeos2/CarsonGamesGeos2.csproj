@@ -56,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dev\debug.cs" />
+    <Compile Include="dev\GUI\Debug Menu\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dev\GUI\Debug Menu\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForms\GUI Items\Message Box\MessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <EmbeddedResource Include="dev\GUI\Debug Menu\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MainResources.Designer.cs</LastGenOutput>

@@ -1,6 +1,6 @@
-﻿namespace CarsonGamesGeos2.Main
+﻿namespace CarsonGamesGeos2.dev.GUI.Debug_Menu
 {
-    partial class MainForm
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -30,17 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // MainForm
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 524);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Name = "MainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainForm";
-            this.TransparencyKey = System.Drawing.Color.Fuchsia;
-            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.ClientSize = new System.Drawing.Size(127, 90);
+            this.Name = "Main";
+            this.Text = "MAin";
             this.ResumeLayout(false);
 
         }
