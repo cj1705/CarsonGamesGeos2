@@ -9,11 +9,11 @@ namespace CarsonGamesGeos2.classes.File_Management
 {
     public class Folders
     {
-        public static bool CreateFolder(string folder, string foldername)
+        public  bool CreateFolder(string path)
         {
             try
             {
-                Directory.CreateDirectory(folder + foldername);
+                Directory.CreateDirectory(path);
                 return true;
             }
             catch (Exception ex)
@@ -21,11 +21,11 @@ namespace CarsonGamesGeos2.classes.File_Management
                 return false;
             }
         }
-        public static bool RemoveFolder(string folder, string foldername)
+        public  bool RemoveFolder(string path)
         {
             try
             {
-                Directory.Delete(folder + foldername);
+                Directory.Delete(path);
                 return true;
             }
             catch (Exception ex)
@@ -33,11 +33,11 @@ namespace CarsonGamesGeos2.classes.File_Management
                 return false;
             }
         }
-        public static bool CheckForFolder(string folder, string foldername)
+        public  bool CheckForFolder(string folder)
         {
             try
             {
-                Directory.GetFiles(folder + foldername);
+                Directory.GetFiles(folder);
                 return true;
             }
             catch (Exception ex)

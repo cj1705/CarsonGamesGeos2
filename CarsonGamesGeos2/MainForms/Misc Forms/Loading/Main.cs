@@ -29,6 +29,18 @@ namespace CarsonGamesGeos2.MainForms.Misc_Forms.Loading
 
           
             pictureBox1.Location = WindowControls.CenterControl(this, pictureBox1);
+            CheckForFTS();
+
+        }
+        public bool CheckForFTS()
+        {
+            classes.checkforfts checkforfts = new classes.checkforfts();
+            if (!checkforfts.Check())
+            {
+                status.Text = "Loading First Time Setup..";
+                return false;
+            }
+            return true;
         }
     }
 }
