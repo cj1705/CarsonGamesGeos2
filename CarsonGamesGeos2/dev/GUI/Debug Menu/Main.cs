@@ -16,5 +16,10 @@ namespace CarsonGamesGeos2.dev.GUI.Debug_Menu
         {
             InitializeComponent();
         }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
