@@ -13,6 +13,7 @@ namespace CarsonGamesGeos2.MainForms.Misc_Forms.Loading
     public partial class Main : Form
     {
         classes.animations animations = new classes.animations();
+        classes.WindowControls WindowControls = new classes.WindowControls();
         public Main()
         {
             InitializeComponent();
@@ -25,11 +26,9 @@ namespace CarsonGamesGeos2.MainForms.Misc_Forms.Loading
 
         private void Main_Load(object sender, EventArgs e)
         {
-            Point p = new Point();
-            p.X = Size.Width / 2;
-            p.Y = Size.Height / 2;
 
-            pictureBox1.Location = new Point((this.Width / 2) - (pictureBox1.Width / 2), (this.Height / 2) - (pictureBox1.Height / 2));
+
+            pictureBox1.Location = WindowControls.CenterControl(this, pictureBox1);
         }
     }
 }
