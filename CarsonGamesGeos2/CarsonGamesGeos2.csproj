@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="classes\animations.cs" />
+    <Compile Include="classes\File Management\Folders.cs" />
     <Compile Include="classes\WindowControls.cs" />
     <Compile Include="dev\debug.cs" />
     <Compile Include="dev\GUI\Debug Menu\Main.cs">
