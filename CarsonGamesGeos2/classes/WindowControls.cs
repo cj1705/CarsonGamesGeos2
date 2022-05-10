@@ -10,6 +10,12 @@ namespace CarsonGamesGeos2.classes
 {
     public class WindowControls
     {
+        public void ResizeFullScreenWindow(Form form)
+        {
+            Main.MainForm main = (Main.MainForm)Application.OpenForms["MainForm"];
+
+            form.Size = main.ClientSize;
+        }
         public Point CenterControl(Control form, Control control)
         {
             return new Point((form.Width / 2) -(control.Width / 2), (form.Height / 2) - (control.Height / 2));
@@ -17,6 +23,7 @@ namespace CarsonGamesGeos2.classes
         public void Open(Form form, string size)
         {
             Main.MainForm main = (Main.MainForm)Application.OpenForms["MainForm"];
+
 
             form.TopLevel = false;
             form.Parent = main;

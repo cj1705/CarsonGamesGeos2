@@ -12,8 +12,9 @@ namespace CarsonGamesGeos2
         static void Main(string[] args)
         {
 #if DEBUG
-            dev.debug debug = new dev.debug();
-            debug.StartDebug();
+          dev.debug debug = new dev.debug();
+          debug.StartDebug();
+          
 
 
 

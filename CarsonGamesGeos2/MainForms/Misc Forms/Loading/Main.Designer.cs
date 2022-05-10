@@ -1,6 +1,6 @@
 ﻿namespace CarsonGamesGeos2.MainForms.Misc_Forms.Loading
 {
-    partial class Main
+    partial class Loading
     {
         /// <summary>
         /// Required designer variable.
@@ -57,7 +57,7 @@
             this.status.Text = "Loading";
             this.status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Main
+            // Loading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -66,8 +66,8 @@
             this.Controls.Add(this.status);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Main";
-            this.Text = "Main";
+            this.Name = "Loading";
+            this.Text = "Loading";
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -77,6 +77,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label status;
+        public System.Windows.Forms.Label status;
     }
 }

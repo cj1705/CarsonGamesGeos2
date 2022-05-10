@@ -27,7 +27,7 @@ namespace CarsonGamesGeos2.dev.GUI.Debug_Menu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MainForms.Misc_Forms.Loading.Main loading = new MainForms.Misc_Forms.Loading.Main();
+            MainForms.Misc_Forms.Loading.Loading loading = new MainForms.Misc_Forms.Loading.Loading();
             WindowControls.Open(loading,"full");
         }
     }

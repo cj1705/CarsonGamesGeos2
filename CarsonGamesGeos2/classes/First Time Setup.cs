@@ -11,9 +11,10 @@ namespace CarsonGamesGeos2.classes
     {
         public void LoadFTS()
         {
-            Main.MainForm main = (Main.MainForm)Application.OpenForms["Main"];
-            MainForms.Misc_Forms.Loading.Main loading = (MainForms.Misc_Forms.Loading.Main)Application.OpenForms["Main"];
-            
+            Main.MainForm main = (Main.MainForm)Application.OpenForms["MainForm"];
+            MainForms.Misc_Forms.Loading.Loading loading = (MainForms.Misc_Forms.Loading.Loading)Application.OpenForms["Loading"];
+            loading.BackColor = System.Drawing.Color.Aqua;
+            loading.status.Text = "Test";
 
         }
     }
