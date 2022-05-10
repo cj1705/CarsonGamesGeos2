@@ -54,8 +54,10 @@
   <ItemGroup>
     <Compile Include="classes\animations.cs" />
     <Compile Include="classes\checkforfts.cs" />
+    <Compile Include="classes\CreateControl.cs" />
     <Compile Include="classes\encryption.cs" />
     <Compile Include="classes\File Management\Folders.cs" />
+    <Compile Include="classes\First Time Setup.cs" />
     <Compile Include="classes\usermangemnt.cs" />
     <Compile Include="classes\WindowControls.cs" />
     <Compile Include="dev\debug.cs" />
@@ -126,6 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DLLS\" />
+    <Folder Include="MainForms\Misc Forms\First Time Setup\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CGGeosLogo-_7_.bmp" />
