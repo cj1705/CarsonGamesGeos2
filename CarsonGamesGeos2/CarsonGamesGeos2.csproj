@@ -82,6 +82,12 @@
     <Compile Include="MainForms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForms\Misc Forms\fts\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Misc Forms\fts\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForms\Misc Forms\Loading\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     <EmbeddedResource Include="dev\GUI\Debug Menu\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Misc Forms\fts\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForms\Misc Forms\Loading\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,7 +141,6 @@
   <ItemGroup>
     <Folder Include="classes\addons\events\" />
     <Folder Include="DLLS\" />
-    <Folder Include="MainForms\Misc Forms\First Time Setup\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CGGeosLogo-_7_.bmp" />

@@ -11,7 +11,7 @@ namespace CarsonGamesGeos2.classes
         File_Management.Folders Folders = new File_Management.Folders();
        public bool Check()
         {
-            if (Folders.CheckForFolder("./settings"))
+            if (Folders.CheckForFolder("./settings/fts"))
             {
                 return true;
             }
