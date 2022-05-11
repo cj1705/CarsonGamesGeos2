@@ -17,8 +17,10 @@ namespace CarsonGamesGeos2.dev
             {
                 if(answer  == "1")
                 {
+
                     Main.MainForm MainForm = new Main.MainForm();
                     MainForm.ShowDialog();
+
                 }
             }
         }

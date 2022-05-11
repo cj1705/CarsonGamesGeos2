@@ -52,12 +52,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\addons\addonloader.cs" />
     <Compile Include="classes\animations.cs" />
     <Compile Include="classes\checkforfts.cs" />
+    <Compile Include="classes\Console\Log.cs" />
     <Compile Include="classes\CreateControl.cs" />
     <Compile Include="classes\encryption.cs" />
     <Compile Include="classes\File Management\Folders.cs" />
     <Compile Include="classes\First Time Setup.cs" />
+    <Compile Include="classes\getForms.cs" />
     <Compile Include="classes\usermangemnt.cs" />
     <Compile Include="classes\WindowControls.cs" />
     <Compile Include="dev\debug.cs" />
@@ -127,6 +130,7 @@
     <None Include="Resources\title.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="classes\addons\events\" />
     <Folder Include="DLLS\" />
     <Folder Include="MainForms\Misc Forms\First Time Setup\" />
   </ItemGroup>

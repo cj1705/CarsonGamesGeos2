@@ -14,7 +14,7 @@ namespace CarsonGamesGeos2.Main
 {
     public partial class MainForm : Form
     {
-        classes.File_Management.Files files = new classes.File_Management.Files();
+        
         classes.File_Management.Folders folders = new classes.File_Management.Folders();
         classes.WindowControls WindowControls = new classes.WindowControls();
         Dictionary<string, string> size1;
@@ -25,6 +25,8 @@ namespace CarsonGamesGeos2.Main
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+           
+
 #if DEBUG
             WindowControls.Open(new dev.GUI.Debug_Menu.Main(),"window");
 #endif
@@ -77,7 +79,7 @@ namespace CarsonGamesGeos2.Main
             {
                 folders.CreateFolder("./settings");
             }
-            if (!files.CheckForFile("./settings/size.txt"))
+            if (!File.Exists("./settings/size.txt"))
             {
               
                 using (StreamWriter sw = new StreamWriter("./settings/size.txt"))

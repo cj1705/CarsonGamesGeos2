@@ -27,6 +27,7 @@ namespace CarsonGamesGeos2.MainForms.Misc_Forms.Loading
 
         private void Main_Load(object sender, EventArgs e)
         {
+            MessageBox.Show(this.Name);
             main.Resize += Main_Resize;
           
             pictureBox1.Location = WindowControls.CenterControl(this, pictureBox1);

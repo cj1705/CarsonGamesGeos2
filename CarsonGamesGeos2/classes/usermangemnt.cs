@@ -38,7 +38,7 @@ namespace CarsonGamesGeos2.classes
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                System.Console.WriteLine(e.Message);
                 return false;
             }
             // return true;
@@ -192,7 +192,7 @@ namespace CarsonGamesGeos2.classes
 
         if (File.Exists(usrpath + "settings/" + file + ".txt"))
         {
-            Console.WriteLine("1");
+            
             config = new JavaScriptSerializer().Deserialize<Dictionary<string, string>>(File.ReadAllText(usrpath + "settings/" + file + ".txt"));
             config.Add(key, value);
 
@@ -211,25 +211,20 @@ namespace CarsonGamesGeos2.classes
         else
         {
             config.Clear();
-            Console.WriteLine("2");
+         
             config.Add(key, value);
-            Console.WriteLine("3");
-
-            Console.WriteLine(usrpath + "settings/" + file + ".txt");
+          
+          
             File.Create(usrpath + "settings/" + file + ".txt");
-            Console.WriteLine("4");
             while (File.Exists(usrpath + "settings/" + file + ".txt"))
             {
                 Thread.Sleep(10);
-                Console.WriteLine("FIle Created");
                 StringBuilder fileloc = new StringBuilder();
                 fileloc.Append(usrpath + "settings/" + file + ".txt");
                 string filel = fileloc.ToString();
-                Console.WriteLine();
                 StreamWriter sw = new StreamWriter(filel);
 
 
-                Console.WriteLine("5");
                 sw.WriteLine(new JavaScriptSerializer().Serialize(config));
                 sw.Dispose();
 
