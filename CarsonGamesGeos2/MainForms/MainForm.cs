@@ -25,7 +25,6 @@ namespace CarsonGamesGeos2.Main
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-           
 
 #if DEBUG
             WindowControls.Open(new dev.GUI.Debug_Menu.Main(),"window");

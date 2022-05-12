@@ -30,7 +30,7 @@
         {
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.titlebar1 = new CarsonGamesGeos.geos.UserControls.UI.Titlebar();
+            this.titlebar2 = new CarsonGamesGeos.geos.UserControls.UI.Titlebar();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -52,19 +52,19 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // titlebar1
+            // titlebar2
             // 
-            this.titlebar1.Location = new System.Drawing.Point(0, 0);
-            this.titlebar1.Name = "titlebar1";
-            this.titlebar1.Size = new System.Drawing.Size(732, 32);
-            this.titlebar1.TabIndex = 3;
+            this.titlebar2.Location = new System.Drawing.Point(0, 0);
+            this.titlebar2.Name = "titlebar2";
+            this.titlebar2.Size = new System.Drawing.Size(732, 32);
+            this.titlebar2.TabIndex = 3;
             // 
             // MessageBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 157);
-            this.Controls.Add(this.titlebar1);
+            this.Controls.Add(this.titlebar2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -81,6 +81,7 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button1;
         private CarsonGamesGeos.geos.UserControls.UI.Titlebar titlebar1;
+        private CarsonGamesGeos.geos.UserControls.UI.Titlebar titlebar2;
         //private JDragControl.JDragControl jDragControl1;
     }
 }

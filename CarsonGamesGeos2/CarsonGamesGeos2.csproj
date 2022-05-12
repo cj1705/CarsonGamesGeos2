@@ -73,6 +73,12 @@
     <Compile Include="dev\GUI\Debug Menu\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="hlp\help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hlp\help.Designer.cs">
+      <DependentUpon>help.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForms\GUI Items\Message Box\MessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     <EmbeddedResource Include="dev\GUI\Debug Menu\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="hlp\help.resx">
+      <DependentUpon>help.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForms\Misc Forms\fts\forms\beforewecontinue.resx">
       <DependentUpon>beforewecontinue.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,11 +167,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\0.hlp" />
     <None Include="Resources\title.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="classes\addons\events\" />
     <Folder Include="DLLS\" />
+    <Folder Include="hlp\builtin\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CGGeosLogo-_7_.bmp" />

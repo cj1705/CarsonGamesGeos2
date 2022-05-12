@@ -17,6 +17,7 @@ namespace CarsonGamesGeos2
 
            Thread addons = new Thread(addonloader.LoadAddons);
             addons.Start();
+            
           
 #if DEBUG
             dev.debug debug = new dev.debug();
