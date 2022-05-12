@@ -32,6 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.flatLabel1 = new FlatUI.FlatLabel();
             this.flatProgressBar1 = new FlatUI.FlatProgressBar();
+            this.formpanel = new System.Windows.Forms.Panel();
             this.formSkin1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -41,6 +42,7 @@
             this.formSkin1.BackColor = System.Drawing.Color.White;
             this.formSkin1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
             this.formSkin1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.formSkin1.Controls.Add(this.formpanel);
             this.formSkin1.Controls.Add(this.panel1);
             this.formSkin1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.formSkin1.FlatColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
@@ -92,6 +94,18 @@
             this.flatProgressBar1.Text = "flatProgressBar1";
             this.flatProgressBar1.Value = 40;
             // 
+            // formpanel
+            // 
+            this.formpanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.formpanel.BackColor = System.Drawing.Color.Transparent;
+            this.formpanel.Location = new System.Drawing.Point(0, 51);
+            this.formpanel.Name = "formpanel";
+            this.formpanel.Size = new System.Drawing.Size(800, 377);
+            this.formpanel.TabIndex = 1;
+            this.formpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.formpanel_Paint);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,7 +116,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main";
+            this.Text = "FTS";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.Load += new System.EventHandler(this.Main_Load);
             this.formSkin1.ResumeLayout(false);
@@ -118,5 +132,6 @@
         private System.Windows.Forms.Panel panel1;
         private FlatUI.FlatLabel flatLabel1;
         private FlatUI.FlatProgressBar flatProgressBar1;
+        public System.Windows.Forms.Panel formpanel;
     }
 }

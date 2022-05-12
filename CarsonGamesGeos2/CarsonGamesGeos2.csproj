@@ -82,6 +82,13 @@
     <Compile Include="MainForms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForms\Misc Forms\fts\formcontrol.cs" />
+    <Compile Include="MainForms\Misc Forms\fts\forms\Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Misc Forms\fts\forms\Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForms\Misc Forms\fts\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +121,9 @@
   <ItemGroup>
     <EmbeddedResource Include="dev\GUI\Debug Menu\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Misc Forms\fts\forms\Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\Misc Forms\fts\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

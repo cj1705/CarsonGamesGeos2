@@ -15,11 +15,17 @@ namespace CarsonGamesGeos2.MainForms.Misc_Forms.fts
         private void Main_Load(object sender, EventArgs e)
         {
             main.Resize += Main_Resize;
+            main.OpenForm(new forms.Welcome());
         }
 
         private void Main_Resize(object sender, EventArgs e)
         {
             WindowControls.ResizeFullScreenWindow(this);
+
+        }
+
+        private void formpanel_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
