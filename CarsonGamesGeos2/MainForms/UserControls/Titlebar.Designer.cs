@@ -30,7 +30,6 @@ namespace CarsonGamesGeos.geos.UserControls.UI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Titlebar));
             this.panel1 = new System.Windows.Forms.Panel();
             this.flatLabel1 = new FlatUI.FlatLabel();
             this.minbutton = new System.Windows.Forms.Button();
@@ -43,14 +42,17 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.flatLabel1);
-            this.panel1.Controls.Add(this.minbutton);
             this.panel1.Controls.Add(this.xbutton);
+            this.panel1.Controls.Add(this.minbutton);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(733, 24);
+            this.panel1.Size = new System.Drawing.Size(733, 33);
             this.panel1.TabIndex = 19;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // flatLabel1
             // 
@@ -58,7 +60,7 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             this.flatLabel1.BackColor = System.Drawing.Color.Transparent;
             this.flatLabel1.Font = new System.Drawing.Font("Segoe UI", 10.25F);
             this.flatLabel1.ForeColor = System.Drawing.Color.White;
-            this.flatLabel1.Location = new System.Drawing.Point(16, 3);
+            this.flatLabel1.Location = new System.Drawing.Point(15, 7);
             this.flatLabel1.Name = "flatLabel1";
             this.flatLabel1.Size = new System.Drawing.Size(68, 19);
             this.flatLabel1.TabIndex = 19;
@@ -74,7 +76,7 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             this.minbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.minbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minbutton.ForeColor = System.Drawing.SystemColors.Control;
-            this.minbutton.Location = new System.Drawing.Point(660, 3);
+            this.minbutton.Location = new System.Drawing.Point(673, 9);
             this.minbutton.Name = "minbutton";
             this.minbutton.Size = new System.Drawing.Size(33, 18);
             this.minbutton.TabIndex = 7;
@@ -84,12 +86,12 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             // 
             // xbutton
             // 
-            this.xbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("xbutton.BackgroundImage")));
+            this.xbutton.BackgroundImage = global::CarsonGamesGeos2.MainResources.Geos_X;
             this.xbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.xbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.xbutton.Location = new System.Drawing.Point(709, 3);
+            this.xbutton.Location = new System.Drawing.Point(699, 3);
             this.xbutton.Name = "xbutton";
-            this.xbutton.Size = new System.Drawing.Size(19, 18);
+            this.xbutton.Size = new System.Drawing.Size(29, 28);
             this.xbutton.TabIndex = 18;
             this.xbutton.UseVisualStyleBackColor = true;
             this.xbutton.Click += new System.EventHandler(this.xbutton_Click);
@@ -104,7 +106,7 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "Titlebar";
-            this.Size = new System.Drawing.Size(732, 23);
+            this.Size = new System.Drawing.Size(732, 32);
             this.Load += new System.EventHandler(this.Titlebar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

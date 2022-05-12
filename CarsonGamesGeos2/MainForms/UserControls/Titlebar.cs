@@ -14,7 +14,8 @@ namespace CarsonGamesGeos.geos.UserControls.UI
     public partial class Titlebar : UserControl
     {
 
-
+        private bool mouseDown;
+        private Point lastLocation;
 
         [DllImport("user32.dll")]
         public static extern IntPtr GetForegroundWindow();
@@ -32,7 +33,7 @@ namespace CarsonGamesGeos.geos.UserControls.UI
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
+          
         }
         public Form Parrentfrm()
         {
@@ -42,6 +43,7 @@ namespace CarsonGamesGeos.geos.UserControls.UI
 
         private void Titlebar_Load(object sender, EventArgs e)
         {
+           
             timer1.Start();
 
 
@@ -125,6 +127,29 @@ namespace CarsonGamesGeos.geos.UserControls.UI
         private void flatLabel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                ParentForm.Location = new Point(
+                    (ParentForm.Location.X - lastLocation.X) + e.X, (ParentForm.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+           
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
         }
     }
       

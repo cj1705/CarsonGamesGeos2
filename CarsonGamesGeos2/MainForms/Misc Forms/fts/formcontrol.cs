@@ -11,14 +11,9 @@ namespace CarsonGamesGeos2.MainForms.Misc_Forms.fts
 
     {
 
-        public MainForms.Misc_Forms.fts.Main main = (MainForms.Misc_Forms.fts.Main)Application.OpenForms["FTS"];
+        
 
-        public void Change(Form form)
-        {
-            main.formpanel.Controls.Clear();
-            main.formpanel.Controls.Add(form);
-            form.Show();
-        }
+        
          
     }
 }

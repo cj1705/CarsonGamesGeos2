@@ -14,15 +14,16 @@ namespace CarsonGamesGeos2.MainForms.Misc_Forms.fts.forms
     {
         MainForms.Misc_Forms.fts.formcontrol formcontrol = new formcontrol();
         classes.WindowControls WindowControls = new classes.WindowControls();
-
+        
         public Welcome()
         {
             InitializeComponent();
         }
 
         private void Welcome_Load(object sender, EventArgs e)
-        {
-            formcontrol.main.formpanel.Resize += Main_Resize;
+            {
+          
+
         }
 
         private void Main_Resize(object sender, EventArgs e)
