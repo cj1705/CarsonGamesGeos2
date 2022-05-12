@@ -28,7 +28,7 @@ namespace CarsonGamesGeos2.classes
                 Folders.CreateFolder("./users");
 
             loading.status.Text = $"{prefix} Setting up FTS enviroment";
-            MainForms.Misc_Forms.fts.Main fts = new MainForms.Misc_Forms.fts.Main();
+            MainForms.Misc_Forms.fts.FTS fts = new MainForms.Misc_Forms.fts.FTS();
             WindowControls windowControls = new WindowControls();
             windowControls.Open(fts, "full");
             fts.Shown += Fts_Shown;

@@ -3,13 +3,13 @@ using System.Windows.Forms;
 
 namespace CarsonGamesGeos2.MainForms.Misc_Forms.fts
 {
-    public partial class Main : Form
+    public partial class FTS : Form
     {
         CarsonGamesGeos2.Main.MainForm main = (CarsonGamesGeos2.Main.MainForm)Application.OpenForms["MainForm"];
         CarsonGamesGeos2.MainForms.Misc_Forms.fts.formcontrol Formcontrol =  new formcontrol();
 
         classes.WindowControls WindowControls = new classes.WindowControls();
-        public Main()
+        public FTS()
         {
             InitializeComponent();
         }
@@ -59,6 +59,19 @@ namespace CarsonGamesGeos2.MainForms.Misc_Forms.fts
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void flatLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void ChangeProgress()
+        {
+            int numforms =  4;
+            int max = 100;
+            int amount = max / numforms;
+            flatProgressBar1.Value = flatProgressBar1.Value + amount;
 
         }
     }

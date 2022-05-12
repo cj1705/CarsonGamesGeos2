@@ -14,7 +14,8 @@ namespace CarsonGamesGeos2.MainForms.Misc_Forms.fts.forms
     {
         MainForms.Misc_Forms.fts.formcontrol formcontrol = new formcontrol();
         classes.WindowControls WindowControls = new classes.WindowControls();
-        
+
+
         public Welcome()
         {
             InitializeComponent();
@@ -29,6 +30,13 @@ namespace CarsonGamesGeos2.MainForms.Misc_Forms.fts.forms
         private void Main_Resize(object sender, EventArgs e)
         {
             WindowControls.ResizeFullScreenWindow(this);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainForms.Misc_Forms.fts.FTS ftsmain = (MainForms.Misc_Forms.fts.FTS)Application.OpenForms["FTS"];
+            ftsmain.ChangeWindow(new beforewecontinue());
+           
         }
     }
 }
