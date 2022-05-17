@@ -11,6 +11,8 @@ namespace CarsonGamesGeos2
 {
     internal class Program
     {
+        [STAThread]
+
         static void Main(string[] args)
         {
             classes.addons.addonloader addonloader = new classes.addons.addonloader();

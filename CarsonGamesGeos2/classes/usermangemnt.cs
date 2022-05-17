@@ -48,8 +48,8 @@ namespace CarsonGamesGeos2.classes
     string usrname = " ";
     string usrpath;
     string pas;
-    string isadmin;
-    string image;
+    bool isadmin;
+    Bitmap image;
     bool logs;
     public Dictionary<string, string> config = new Dictionary<string, string>();
         Color bkcolor;
@@ -57,7 +57,7 @@ namespace CarsonGamesGeos2.classes
         Color cgformcolor;
     
 
-    public bool Setup(string a, string b, string c, string d, Color cgcolor,Color bk,Color menuclr, bool log)
+    public bool Setup(string username, string password, bool admin, Image image, Color cgcolor,Color bk,Color menuclr, bool log)
     {
             bkcolor = bk;
             menucolor = menuclr;
@@ -76,16 +76,22 @@ namespace CarsonGamesGeos2.classes
             }
         }
 
-        usrname = a;
-        pas = b;
-        isadmin = c;
-        image = d;
+        usrname = username;
+        pas = password;
+        isadmin = admin;
+         
 
         Directory.CreateDirectory("Users/" + usrname);
         usrpath = "Users/" + usrname + "/";
+            if(!File.Exists("./config/users.txt")){
+                File.Create("./config/" + "users.txt");
+                StreamWriter sw = new StreamWriter("./config/" + "users.txt");
+                sw.WriteLine("{}");
+                sw.Dispose();
+            }
         users = new JavaScriptSerializer().Deserialize<Dictionary<string, string>>(File.ReadAllText("./config/" + "users.txt"));
 
-        if (users.ContainsKey(a))
+        if (users.ContainsKey(username))
         {
            // Properties.execptionthrown.Default.addusr = "1";
           //  Program.MainFrm.OpenForm(new geos.error.Messagebox("User already exists!"), "Dialog");
@@ -95,7 +101,7 @@ namespace CarsonGamesGeos2.classes
         string passwrd = encyption.EncryptString(pas);
 
       
-        users.Add(a, passwrd);
+        users.Add(username, passwrd);
         using (StreamWriter sw = new StreamWriter("./config/" + "users.txt"))
         {
 
@@ -143,7 +149,7 @@ namespace CarsonGamesGeos2.classes
         } // sw goes out of scope here, and is disposed automatically    
         config.Clear();
         //  File.Create(usrpath + "settings/admin.txt");
-        config.Add("admin", isadmin);
+        config.Add("admin", isadmin.ToString());
         using (StreamWriter sw = new StreamWriter(usrpath + "settings/admin.txt"))
         {
 

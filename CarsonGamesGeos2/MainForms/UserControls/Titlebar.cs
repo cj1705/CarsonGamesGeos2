@@ -83,9 +83,7 @@ namespace CarsonGamesGeos.geos.UserControls.UI
         private void timer1_Tick(object sender, EventArgs e)
         {
             Form frm = Application.OpenForms[this.FindForm().Name];
-            if (IsActive(frm.Handle))
-            {
-            }
+            
         }
         void CheckFocus()
         {

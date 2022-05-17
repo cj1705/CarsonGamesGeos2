@@ -73,6 +73,11 @@
     <Compile Include="dev\GUI\Debug Menu\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="fts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>fts.settings</DependentUpon>
+    </Compile>
     <Compile Include="hlp\help.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +102,12 @@
     </Compile>
     <Compile Include="MainForms\Misc Forms\fts\forms\beforewecontinue.Designer.cs">
       <DependentUpon>beforewecontinue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Misc Forms\fts\forms\UserSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Misc Forms\fts\forms\UserSetup.Designer.cs">
+      <DependentUpon>UserSetup.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForms\Misc Forms\fts\forms\Welcome.cs">
       <SubType>Form</SubType>
@@ -143,6 +154,9 @@
     <EmbeddedResource Include="MainForms\Misc Forms\fts\forms\beforewecontinue.resx">
       <DependentUpon>beforewecontinue.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Misc Forms\fts\forms\UserSetup.resx">
+      <DependentUpon>UserSetup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForms\Misc Forms\fts\forms\Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +181,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="fts.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>fts.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\0.hlp" />
     <None Include="Resources\title.txt" />
   </ItemGroup>

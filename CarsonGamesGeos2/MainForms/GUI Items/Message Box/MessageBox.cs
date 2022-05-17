@@ -36,14 +36,14 @@ namespace CarsonGamesGeos2.Main.GUI_Items.Message_Box
         }
         public string ParseString(string text)
         {
-            string a = " ";
-            if (text == "-1")
-            {
-                a = "Generic Error -1";
-            }
+            //string a = " ";
+            //if (text == "-1")
+            //{
+            //    a = "Generic Error -1";
+            //}
 
 
-            return a;
+            return text;
 
         }
 

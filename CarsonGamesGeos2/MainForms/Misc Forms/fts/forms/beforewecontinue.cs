@@ -46,7 +46,8 @@ namespace CarsonGamesGeos2.MainForms.Misc_Forms.fts.forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            MainForms.Misc_Forms.fts.FTS ftsmain = (MainForms.Misc_Forms.fts.FTS)Application.OpenForms["FTS"];
+            ftsmain.ChangeWindow(new UserSetup());
         }
     }
 }
