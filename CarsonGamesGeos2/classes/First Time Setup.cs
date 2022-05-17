@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,15 @@ namespace CarsonGamesGeos2.classes
             if (!Folders.CheckForFolder("./settings"))
                 Folders.CreateFolder("./settings");
             if (!Folders.CheckForFolder("./settings/users"))
+            {
                 Folders.CreateFolder("./settings/users");
+                using (var sw = new StreamWriter("./settings/users/userlst.txt"))
+                {
+                    sw.WriteLine("{}");
+                    sw.Close();
+                }
+            }
+            
             if (!Folders.CheckForFolder("./settings/system"))
                 Folders.CreateFolder("./settings/system");
             if (!Folders.CheckForFolder("./users"))

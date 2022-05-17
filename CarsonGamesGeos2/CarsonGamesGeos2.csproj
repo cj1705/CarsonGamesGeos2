@@ -64,6 +64,7 @@
     <Compile Include="classes\File Management\Folders.cs" />
     <Compile Include="classes\First Time Setup.cs" />
     <Compile Include="classes\getForms.cs" />
+    <Compile Include="classes\misc.cs" />
     <Compile Include="classes\usermangemnt.cs" />
     <Compile Include="classes\WindowControls.cs" />
     <Compile Include="dev\debug.cs" />

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace CarsonGamesGeos2.classes
 {
     public class usermangemnt
     {
+       
         public Dictionary<string, string> users = new Dictionary<string, string>();
         encryption encyption = new encryption();
 
@@ -49,7 +51,8 @@ namespace CarsonGamesGeos2.classes
     string usrpath;
     string pas;
     bool isadmin;
-    Bitmap image;
+        string imgpath;
+   
     bool logs;
     public Dictionary<string, string> config = new Dictionary<string, string>();
         Color bkcolor;
@@ -57,11 +60,13 @@ namespace CarsonGamesGeos2.classes
         Color cgformcolor;
     
 
-    public bool Setup(string username, string password, bool admin, Image image, Color cgcolor,Color bk,Color menuclr, bool log)
+    public bool Setup(string username, string password, bool admin, string imagepath, Color cgcolor,Color bk,Color menuclr, bool log)
     {
             bkcolor = bk;
             menucolor = menuclr;
             cgformcolor = cgcolor;
+            imgpath = imagepath;
+           
 
         if (log == true)
         {
@@ -83,13 +88,8 @@ namespace CarsonGamesGeos2.classes
 
         Directory.CreateDirectory("Users/" + usrname);
         usrpath = "Users/" + usrname + "/";
-            if(!File.Exists("./config/users.txt")){
-                File.Create("./config/" + "users.txt");
-                StreamWriter sw = new StreamWriter("./config/" + "users.txt");
-                sw.WriteLine("{}");
-                sw.Dispose();
-            }
-        users = new JavaScriptSerializer().Deserialize<Dictionary<string, string>>(File.ReadAllText("./config/" + "users.txt"));
+           
+        users = new JavaScriptSerializer().Deserialize<Dictionary<string, string>>(File.ReadAllText("./settings/users/userlst.txt"));
 
         if (users.ContainsKey(username))
         {
@@ -102,7 +102,7 @@ namespace CarsonGamesGeos2.classes
 
       
         users.Add(username, passwrd);
-        using (StreamWriter sw = new StreamWriter("./config/" + "users.txt"))
+        using (StreamWriter sw = new StreamWriter("./settings/users/userlst.txt"))
         {
 
             _ = sw.WriteAsync(new JavaScriptSerializer().Serialize(users));
@@ -188,8 +188,13 @@ namespace CarsonGamesGeos2.classes
 
             }
         }
+        if(imgpath != null)
+            {
+                File.Copy(imgpath, usrpath + "settings/misc" + "image.png");
+            }
+         
 
-        return true;
+            return true;
 
     }
     public bool AddSettings(string user, string file, string key, string value)
@@ -238,6 +243,8 @@ namespace CarsonGamesGeos2.classes
                 config.Clear();
                 return true;
             }
+
+             
             return true;
 
         }
