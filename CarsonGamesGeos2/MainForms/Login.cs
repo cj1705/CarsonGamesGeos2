@@ -25,11 +25,30 @@ namespace CarsonGamesGeos2.MainForms
         {
 
             main.Resize += Main_Resize;
+            timer1.Start();
         }
 
         private void Main_Resize(object sender, EventArgs e)
         {
             WindowControls.ResizeFullScreenWindow(this);
+        }
+
+        private void clock_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            classes.clock clockclass = new classes.clock();
+            clock.Text = clockclass.GetTime();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+
+
         }
     }
 }
