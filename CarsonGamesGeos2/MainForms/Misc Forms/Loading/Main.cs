@@ -49,6 +49,12 @@ namespace CarsonGamesGeos2.MainForms.Misc_Forms.Loading
                 first_Time_Setup.LoadFTS();
                 return false;
             }
+            else
+            {
+               
+                WindowControls.Login();
+              
+            }
             return true;
         }
     }
