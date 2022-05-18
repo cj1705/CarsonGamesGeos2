@@ -71,7 +71,7 @@ namespace CarsonGamesGeos2 {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Carson Games Geos and Carson Games Geos 2 are projects that I code as a side project. As of now the software is not done. This software is open source on GitHub to provide the code that as well as have the chance for others to help fix broken code as well as show me better ways to code. With that being said, By using this software you agree that this software comes with no warrenty and/or no responsibility for any damages to your computer if any occures.  .
+        ///   Looks up a localized string similar to Carson Games Geos and Carson Games Geos 2 are projects that I code as a side project. As of now the software is not done. This software is open source on GitHub to provide the code as well as have the chance for others to help fix broken code as well as show me better ways to code. With that being said, By using this software you agree that this software comes with no warrenty and/or no responsibility for any damages to your computer if any occures.  .
         /// </summary>
         internal static string as_is {
             get {
@@ -95,6 +95,16 @@ namespace CarsonGamesGeos2 {
         internal static System.Drawing.Bitmap Geos_X {
             get {
                 object obj = ResourceManager.GetObject("Geos_X", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap questionmark {
+            get {
+                object obj = ResourceManager.GetObject("questionmark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

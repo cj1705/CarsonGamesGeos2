@@ -190,10 +190,11 @@ namespace CarsonGamesGeos2.classes
         }
         if(imgpath != null)
             {
-                File.Copy(imgpath, usrpath + "settings/misc" + "image.png");
+                Directory.CreateDirectory(usrpath + "settings/misc");
+                File.Copy(imgpath, usrpath + "settings/misc/" + "image.png");
             }
-         
 
+            Directory.CreateDirectory("./settings/fts");
             return true;
 
     }

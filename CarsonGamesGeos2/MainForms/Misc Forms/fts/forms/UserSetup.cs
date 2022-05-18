@@ -80,7 +80,23 @@ namespace CarsonGamesGeos2.MainForms.Misc_Forms.fts.forms
         {
             if(usericon.Image == null)
             {
-                usericon.Image = MainResources.Geos_X;
+                if (!Directory.Exists("./tmp"))
+                {
+
+                    Directory.CreateDirectory("./tmp");
+                }
+                if (File.Exists("./tmp/img.png"))
+                    File.Delete("./tmp/img.png");
+                classes.misc misc = new classes.misc();
+
+
+
+
+                Image img = MainResources.questionmark;
+                img.Save(Path.GetTempPath() + "/image.png");
+                img = misc.resizeImage(128, 128, Path.GetTempPath() + "/image.png");
+                img.Save("./tmp/img.png");
+                usericon.Image = img;
             }
          classes.usermangemnt usermangemnt = new classes.usermangemnt();usermangemnt.Setup(usernametxt.Text, passwordtxt.Text, true, "./tmp/img.png", Color.White, Color.White, Color.White,false);
         }
