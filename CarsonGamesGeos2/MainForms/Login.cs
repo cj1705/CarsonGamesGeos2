@@ -45,7 +45,15 @@ namespace CarsonGamesGeos2.MainForms
                
 
                     lstviewItem = new ListViewItem($"  {key.Key}" );
-                    lstviewItemImageList.ImageSize = new Size(25, 25);
+                if(key.Value == String.Empty || (key.Value == " ")){
+                    lstviewItem.SubItems.Add("0");
+                }
+                else
+                {
+                    lstviewItem.SubItems.Add("1");
+
+                }
+                lstviewItemImageList.ImageSize = new Size(25, 25);
                     listView1.SmallImageList = lstviewItemImageList;
                     lstviewItem.ImageIndex = lstviewItemImageList.Images.Add(Image.FromFile($"users\\{key.Key}\\settings\\misc\\image.png"), Color.Transparent);
                     listView1.Items.Add(lstviewItem);
@@ -78,6 +86,18 @@ namespace CarsonGamesGeos2.MainForms
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+          
+                if (listView1.SelectedItems[0].SubItems[1].Text == "1")
+                {
+                groupBox2.Visible = true;
+                    username.Text = ($"Enter the password for{listView1.SelectedItems[0].Text}");
+                }
+           
+        }
+
+        private void username_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
