@@ -13,6 +13,7 @@ namespace CarsonGamesGeos2.MainForms
 
     public partial class Login : Form
     {
+        string usernamestr = " ";
         Main.MainForm main = (Main.MainForm)Application.OpenForms["MainForm"];
         classes.animations animations = new classes.animations();
         classes.WindowControls WindowControls = new classes.WindowControls();
@@ -44,7 +45,7 @@ namespace CarsonGamesGeos2.MainForms
             {
                
 
-                    lstviewItem = new ListViewItem($"  {key.Key}" );
+                    lstviewItem = new ListViewItem($"{key.Key}" );
                 if(key.Value == String.Empty || (key.Value == " ")){
                     lstviewItem.SubItems.Add("0");
                 }
@@ -86,18 +87,35 @@ namespace CarsonGamesGeos2.MainForms
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
+            try
+            {
+                usernamestr = listView1.SelectedItems[0].Text;
                 if (listView1.SelectedItems[0].SubItems[1].Text == "1")
                 {
-                groupBox2.Visible = true;
-                    username.Text = ($"Enter the password for{listView1.SelectedItems[0].Text}");
+                    groupBox2.Visible = true;
+                    username.Text = ($"Enter the password for {usernamestr}");
+                    Console.WriteLine(usernamestr);
+
                 }
+            }
+            catch(Exception ex)
+            {
+
+            }
            
         }
 
         private void username_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (Usermangemnt.CheckPasswrd(usernamestr, textBox1.Text))
+            {
+                MessageBox.Show("Correct!");
+            }
         }
     }
 }

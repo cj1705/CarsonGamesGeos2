@@ -23,16 +23,20 @@ namespace CarsonGamesGeos2.classes
         public Dictionary<string, string> users = new Dictionary<string, string>();
         encryption encyption = new encryption();
 
-        public Boolean CheckPasswrd(string a, string b)
+        public Boolean CheckPasswrd(string user, string pass)
         {
-            users = new JavaScriptSerializer().Deserialize<Dictionary<string, string>>(File.ReadAllText("./config/" + "users.txt"));
-            //   Console.WriteLine(users["admin"]);
-            try
+            
+         
+            users = UserList();
+            
+          foreach (var userss in users)
             {
+                System.Console.WriteLine(userss);
+            }
                 var key = "b14ca5898a4e4133bbce2ea2315a1916"; //testing key
 
-                string encryptedpass = users[a];
-                string enteredpass = b;
+                string encryptedpass = users[user];
+                string enteredpass = pass;
                 string encrypedcheck = encyption.EncryptString(enteredpass);
 
                 if (encryptedpass == encrypedcheck)
@@ -44,13 +48,13 @@ namespace CarsonGamesGeos2.classes
                     return false;
                 }
             }
-            catch (Exception e)
-            {
-                System.Console.WriteLine(e.Message);
-                return false;
-            }
+           // catch (Exception e)
+           // {
+            //    System.Console.WriteLine(e.Message);
+                //return false;
+          //  }
             // return true;
-        }
+       // }
 
     
     string usrname = " ";
