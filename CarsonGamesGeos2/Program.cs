@@ -21,6 +21,7 @@ namespace CarsonGamesGeos2
 
         const int SW_HIDE = 0;
         const int SW_SHOW = 5;
+        [STAThread]
         static void Main(string[] args)
         {
             classes.addons.addonloader addonloader = new classes.addons.addonloader();

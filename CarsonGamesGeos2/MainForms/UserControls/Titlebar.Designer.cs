@@ -32,8 +32,8 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.flatLabel1 = new FlatUI.FlatLabel();
-            this.minbutton = new System.Windows.Forms.Button();
             this.xbutton = new System.Windows.Forms.Button();
+            this.minbutton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +67,18 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             this.flatLabel1.Text = "flatLabel1";
             this.flatLabel1.Click += new System.EventHandler(this.flatLabel1_Click);
             // 
+            // xbutton
+            // 
+            this.xbutton.BackgroundImage = global::CarsonGamesGeos2.MainResources.Geos_X;
+            this.xbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.xbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.xbutton.Location = new System.Drawing.Point(699, 3);
+            this.xbutton.Name = "xbutton";
+            this.xbutton.Size = new System.Drawing.Size(29, 28);
+            this.xbutton.TabIndex = 18;
+            this.xbutton.UseVisualStyleBackColor = true;
+            this.xbutton.Click += new System.EventHandler(this.xbutton_Click);
+            // 
             // minbutton
             // 
             this.minbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -84,18 +96,6 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             this.minbutton.UseVisualStyleBackColor = false;
             this.minbutton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // xbutton
-            // 
-            this.xbutton.BackgroundImage = global::CarsonGamesGeos2.MainResources.Geos_X;
-            this.xbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.xbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.xbutton.Location = new System.Drawing.Point(699, 3);
-            this.xbutton.Name = "xbutton";
-            this.xbutton.Size = new System.Drawing.Size(29, 28);
-            this.xbutton.TabIndex = 18;
-            this.xbutton.UseVisualStyleBackColor = true;
-            this.xbutton.Click += new System.EventHandler(this.xbutton_Click);
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -108,6 +108,7 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             this.Name = "Titlebar";
             this.Size = new System.Drawing.Size(732, 32);
             this.Load += new System.EventHandler(this.Titlebar_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Titlebar_Paint);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

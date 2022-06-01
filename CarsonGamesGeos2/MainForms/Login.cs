@@ -16,16 +16,41 @@ namespace CarsonGamesGeos2.MainForms
         Main.MainForm main = (Main.MainForm)Application.OpenForms["MainForm"];
         classes.animations animations = new classes.animations();
         classes.WindowControls WindowControls = new classes.WindowControls();
+        classes.usermangemnt Usermangemnt = new classes.usermangemnt();
         public Login()
         {
             InitializeComponent();
         }
-
+        ListViewItem lstviewItem;
+        ImageList lstviewItemImageList = new ImageList();
         private void Login_Load(object sender, EventArgs e)
         {
 
             main.Resize += Main_Resize;
             timer1.Start();
+            listView1.View = View.Details;
+            listView1.Columns.Add(" ");
+            listView1.ForeColor = Color.White;
+            listView1.Columns[0].Width = 500;
+            WindowControls.CenterControl(main, listView1);
+
+            PopulateUsers();
+
+        }
+        public void PopulateUsers()
+        {
+            
+            foreach(var key in Usermangemnt.UserList())
+            {
+               
+
+                    lstviewItem = new ListViewItem($"  {key.Key}" );
+                    lstviewItemImageList.ImageSize = new Size(25, 25);
+                    listView1.SmallImageList = lstviewItemImageList;
+                    lstviewItem.ImageIndex = lstviewItemImageList.Images.Add(Image.FromFile($"users\\{key.Key}\\settings\\misc\\image.png"), Color.Transparent);
+                    listView1.Items.Add(lstviewItem);
+                
+            }
         }
 
         private void Main_Resize(object sender, EventArgs e)
@@ -49,6 +74,10 @@ namespace CarsonGamesGeos2.MainForms
 
 
 
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

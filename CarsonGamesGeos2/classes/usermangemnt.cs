@@ -13,7 +13,13 @@ namespace CarsonGamesGeos2.classes
 {
     public class usermangemnt
     {
-       
+
+        public Dictionary<string,string> UserList()
+        {
+            return new JavaScriptSerializer().Deserialize<Dictionary<string, string>>(File.ReadAllText("./settings/users/userlst.txt"));
+
+        }
+
         public Dictionary<string, string> users = new Dictionary<string, string>();
         encryption encyption = new encryption();
 

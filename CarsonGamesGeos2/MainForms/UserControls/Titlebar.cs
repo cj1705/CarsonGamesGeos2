@@ -33,7 +33,6 @@ namespace CarsonGamesGeos.geos.UserControls.UI
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-          
         }
         public Form Parrentfrm()
         {
@@ -55,15 +54,19 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             flatLabel1.Text = Parrentfrm().Name;
 
             this.Width = Parrentfrm().Width + 5;
+            
 
             panel1.Width = this.Width;
             int frmwidth = Parrentfrm().Width;
             //label4.Left = frmwidth - 400;
             xbutton.Left = frmwidth - 25;
             minbutton.Left = xbutton.Left - 50;
+            Parrentfrm().Paint += Titlebar_Paint1;
+        }
 
-            Console.WriteLine(xbutton.Location);
-
+        private void Titlebar_Paint1(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.Parrentfrm().ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -148,6 +151,12 @@ namespace CarsonGamesGeos.geos.UserControls.UI
         private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
+        }
+
+        private void Titlebar_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.DrawRectangle(Pens.Black, this.Bounds);
+
         }
     }
       
