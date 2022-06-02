@@ -224,4 +224,9 @@
     <None Include="Resources\questionmark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>mkdir "$(TargetDir)\geos\"
+copy /B /Y "$(TargetDir)*.dll" "$(TargetDir)geos\"
+del "$(TargetDir)*.dll"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

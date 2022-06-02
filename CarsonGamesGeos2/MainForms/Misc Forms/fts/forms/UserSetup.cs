@@ -99,6 +99,7 @@ namespace CarsonGamesGeos2.MainForms.Misc_Forms.fts.forms
                 usericon.Image = img;
             }
          classes.usermangemnt usermangemnt = new classes.usermangemnt();usermangemnt.Setup(usernametxt.Text, passwordtxt.Text, true, "./tmp/img.png", Color.White, Color.White, Color.White,false);
+            Application.Restart();
         }
     }
 }
