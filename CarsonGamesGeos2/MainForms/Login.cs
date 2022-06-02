@@ -114,8 +114,12 @@ namespace CarsonGamesGeos2.MainForms
         {
             if (Usermangemnt.CheckPasswrd(usernamestr, textBox1.Text))
             {
-                MessageBox.Show("Correct!");
+                StartDesktop(usernamestr,textBox1.Text);
             }
+        }
+        internal void StartDesktop(string user, string epass)
+        {
+            Usermangemnt.LoadDesktop(user, epass);
         }
     }
 }

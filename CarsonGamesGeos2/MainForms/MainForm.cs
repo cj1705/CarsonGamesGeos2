@@ -14,7 +14,9 @@ namespace CarsonGamesGeos2.Main
 {
     public partial class MainForm : Form
     {
-        
+        public string loggedin = " ";
+
+
         classes.File_Management.Folders folders = new classes.File_Management.Folders();
         classes.WindowControls WindowControls = new classes.WindowControls();
         Dictionary<string, string> size1;

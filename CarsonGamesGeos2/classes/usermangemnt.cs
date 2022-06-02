@@ -8,11 +8,25 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
+using System.Windows.Forms;
 
 namespace CarsonGamesGeos2.classes
 {
     public class usermangemnt
     {
+        public void LoadDesktop(string user, string epass)
+        {
+            if (CheckPasswrd(user, epass))
+            {
+                Main.MainForm main = (Main.MainForm)Application.OpenForms["MainForm"];
+                MainForms.Login login = (MainForms.Login)Application.OpenForms["Login"];
+                login.Dispose();
+                main.loggedin = user;
+                File_Management.File file = new File_Management.File();
+               MessageBox.Show(file.Get(".", "color","bcolor"));
+            }
+
+        }
 
         public Dictionary<string,string> UserList()
         {

@@ -62,6 +62,7 @@
     <Compile Include="classes\Console\Log.cs" />
     <Compile Include="classes\CreateControl.cs" />
     <Compile Include="classes\encryption.cs" />
+    <Compile Include="classes\File Management\File.cs" />
     <Compile Include="classes\File Management\Folders.cs" />
     <Compile Include="classes\First Time Setup.cs" />
     <Compile Include="classes\getForms.cs" />
