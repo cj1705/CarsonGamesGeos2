@@ -23,7 +23,7 @@ namespace CarsonGamesGeos2.classes
                 login.Dispose();
                 main.loggedin = user;
                 File_Management.File file = new File_Management.File();
-               MessageBox.Show(file.Get(".", "color","bcolor"));
+                main.BackColor = Color.FromArgb(Int32.Parse(file.Get(".", "color", "bcolor")));
             }
 
         }

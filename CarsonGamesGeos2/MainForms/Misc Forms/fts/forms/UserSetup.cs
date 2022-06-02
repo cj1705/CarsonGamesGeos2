@@ -98,8 +98,19 @@ namespace CarsonGamesGeos2.MainForms.Misc_Forms.fts.forms
                 img.Save("./tmp/img.png");
                 usericon.Image = img;
             }
-         classes.usermangemnt usermangemnt = new classes.usermangemnt();usermangemnt.Setup(usernametxt.Text, passwordtxt.Text, true, "./tmp/img.png", Color.White, Color.White, Color.White,false);
+         classes.usermangemnt usermangemnt = new classes.usermangemnt();usermangemnt.Setup(usernametxt.Text, passwordtxt.Text, true, "./tmp/img.png", Color.White, panel1.BackColor, Color.White,false);
             Application.Restart();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+                panel1.BackColor = colorDialog1.Color;
         }
     }
 }
