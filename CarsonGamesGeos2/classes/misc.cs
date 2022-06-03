@@ -10,6 +10,14 @@ namespace CarsonGamesGeos2.classes
 {
     public class misc
     {
+        public string GetVersionString()
+        {
+
+         
+            return version.Build.ToString();
+  
+
+        }
         public Image resizeImage(int newWidth, int newHeight, string stPhotoPath)
         {
             Image imgPhoto = Image.FromFile(stPhotoPath);

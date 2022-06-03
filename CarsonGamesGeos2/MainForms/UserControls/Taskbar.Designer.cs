@@ -101,6 +101,7 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click_2);
             // 
             // button3
             // 
@@ -369,19 +370,19 @@
             // minToolStripMenuItem
             // 
             this.minToolStripMenuItem.Name = "minToolStripMenuItem";
-            this.minToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.minToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.minToolStripMenuItem.Text = "Min";
             // 
             // bringToFrontToolStripMenuItem
             // 
             this.bringToFrontToolStripMenuItem.Name = "bringToFrontToolStripMenuItem";
-            this.bringToFrontToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bringToFrontToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.bringToFrontToolStripMenuItem.Text = "Bring to Front";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // MenuBar
@@ -392,6 +393,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "MenuBar";
             this.Size = new System.Drawing.Size(863, 464);
+            this.Load += new System.EventHandler(this.MenuBar_Load_1);
             this.appmenu.ResumeLayout(false);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();

@@ -62,11 +62,19 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             xbutton.Left = frmwidth - 25;
             minbutton.Left = xbutton.Left - 50;
             Parrentfrm().Paint += Titlebar_Paint1;
+            
         }
 
         private void Titlebar_Paint1(object sender, PaintEventArgs e)
         {
-            ControlPaint.DrawBorder(e.Graphics, this.Parrentfrm().ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+            try
+            {
+                ControlPaint.DrawBorder(e.Graphics, this.Parrentfrm().ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)

@@ -105,6 +105,12 @@
     <Compile Include="MainForms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForms\Misc Forms\about\about.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Misc Forms\about\about.Designer.cs">
+      <DependentUpon>about.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForms\Misc Forms\fts\formcontrol.cs" />
     <Compile Include="MainForms\Misc Forms\fts\forms\beforewecontinue.cs">
       <SubType>Form</SubType>
@@ -155,9 +161,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MainResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="version.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>version.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="version.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>version.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="dev\GUI\Debug Menu\Main.resx">
@@ -168,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Misc Forms\about\about.resx">
+      <DependentUpon>about.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\Misc Forms\fts\forms\beforewecontinue.resx">
       <DependentUpon>beforewecontinue.cs</DependentUpon>

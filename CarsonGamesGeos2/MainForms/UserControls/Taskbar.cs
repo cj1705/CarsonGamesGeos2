@@ -18,6 +18,8 @@ namespace CarsonGamesGeos.geos.UserControls.UI
     {
         private const string V = "MainForm";
         ToolTip tt = new ToolTip();
+        CarsonGamesGeos2.Main.MainForm MainForm = (CarsonGamesGeos2.Main.MainForm)Application.OpenForms["MainForm"];
+        CarsonGamesGeos2.classes.WindowControls WindowControls = new WindowControls();
         public MenuBar()
         {
             InitializeComponent();
@@ -29,8 +31,19 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             CloseOld.Start();
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             files.Click += filesToolStripMenuItem_Click;
+            MainForm.Resize += MainForm_Resize;
+            label2.Text = MainForm.loggedin;
+
+            
 
 
+        }
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            this.Dock = DockStyle.None;
+            this.Size = MainForm.ClientSize;
+            this.Dock = DockStyle.Bottom;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -266,7 +279,7 @@ namespace CarsonGamesGeos.geos.UserControls.UI
         }
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-         //   Program.MainFrm.OpenForm(new about(), "Normal");
+            WindowControls.Open(new CarsonGamesGeos2.MainForms.Misc_Forms.about.about(), "normal");
             Close();
         }
         private void filesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -587,6 +600,16 @@ namespace CarsonGamesGeos.geos.UserControls.UI
         {
             clock clock = new clock();
             label1.Text = clock.GetTime();
+        }
+
+        private void MenuBar_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_2(object sender, EventArgs e)
+        {
+
         }
     }
 }

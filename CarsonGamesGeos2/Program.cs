@@ -17,13 +17,17 @@ namespace CarsonGamesGeos2
         static extern IntPtr GetConsoleWindow();
 
         [DllImport("user32.dll")]
+
         static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
 
         const int SW_HIDE = 0;
         const int SW_SHOW = 5;
+        public string versionstring = " ";
+
         [STAThread]
         static void Main(string[] args)
         {
+            Program pgm = new Program();
             classes.addons.addonloader addonloader = new classes.addons.addonloader();
 
            Thread addons = new Thread(addonloader.LoadAddons);
@@ -39,6 +43,8 @@ namespace CarsonGamesGeos2
 
 
 #else
+            pgm.versionstring = "N/A";
+
             var handle = GetConsoleWindow();
             ShowWindow(handle, SW_HIDE);
 

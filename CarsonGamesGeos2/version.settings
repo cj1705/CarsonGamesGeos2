@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CarsonGamesGeos2" GeneratedClassName="version">
+  <Profiles />
+  <Settings>
+    <Setting Name="dev" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Dev 2.0 Release</Value>
+    </Setting>
+    <Setting Name="norm" Type="System.String" Scope="User">
+      <Value Profile="(Default)">N/A</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
