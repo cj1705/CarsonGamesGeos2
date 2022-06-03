@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarsonGamesGeos.geos.UserControls.UI;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -24,6 +25,10 @@ namespace CarsonGamesGeos2.classes
                 main.loggedin = user;
                 File_Management.File file = new File_Management.File();
                 main.BackColor = Color.FromArgb(Int32.Parse(file.Get(".", "color", "bcolor")));
+                MenuBar desktop = new MenuBar();
+                desktop.Parent = main;
+                desktop.Size = main.ClientSize;
+                desktop.Show();
             }
 
         }

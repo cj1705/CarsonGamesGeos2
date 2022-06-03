@@ -136,6 +136,12 @@
     <Compile Include="MainForms\Misc Forms\Loading\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForms\UserControls\Taskbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\UserControls\Taskbar.Designer.cs">
+      <DependentUpon>Taskbar.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForms\UserControls\Titlebar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\Misc Forms\Loading\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\UserControls\Taskbar.resx">
+      <DependentUpon>Taskbar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
