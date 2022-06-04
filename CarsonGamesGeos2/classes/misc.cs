@@ -13,9 +13,14 @@ namespace CarsonGamesGeos2.classes
         public string GetVersionString()
         {
 
-         
-            return version.Build.ToString();
-  
+#if DEBUG
+
+
+            return MainResources.devversion;
+#else
+return MainResources.normversion;
+#endif
+
 
         }
         public Image resizeImage(int newWidth, int newHeight, string stPhotoPath)

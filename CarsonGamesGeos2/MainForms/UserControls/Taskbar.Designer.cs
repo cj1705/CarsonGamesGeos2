@@ -320,6 +320,7 @@
             this.tasklist.TabIndex = 4;
             this.tasklist.TabStop = false;
             this.tasklist.UseCompatibleStateImageBehavior = false;
+            this.tasklist.CacheVirtualItems += new System.Windows.Forms.CacheVirtualItemsEventHandler(this.tasklist_CacheVirtualItems);
             this.tasklist.Click += new System.EventHandler(this.tasklist_Click);
             this.tasklist.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tasklist_MouseClick);
             // 
@@ -364,26 +365,29 @@
             this.bringToFrontToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(148, 70);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(181, 92);
             this.contextMenuStrip2.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip2_Opening_1);
             // 
             // minToolStripMenuItem
             // 
             this.minToolStripMenuItem.Name = "minToolStripMenuItem";
-            this.minToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.minToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.minToolStripMenuItem.Text = "Min";
+            this.minToolStripMenuItem.Click += new System.EventHandler(this.minToolStripMenuItem_Click_1);
             // 
             // bringToFrontToolStripMenuItem
             // 
             this.bringToFrontToolStripMenuItem.Name = "bringToFrontToolStripMenuItem";
-            this.bringToFrontToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.bringToFrontToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bringToFrontToolStripMenuItem.Text = "Bring to Front";
+            this.bringToFrontToolStripMenuItem.Click += new System.EventHandler(this.bringToFrontToolStripMenuItem_Click_1);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
             // 
             // MenuBar
             // 

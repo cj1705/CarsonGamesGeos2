@@ -611,5 +611,28 @@ namespace CarsonGamesGeos.geos.UserControls.UI
         {
 
         }
+
+        private void tasklist_CacheVirtualItems(object sender, CacheVirtualItemsEventArgs e)
+        {
+
+        }
+
+        private void minToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ListViewItem selectedForm = tasklist.SelectedItems[0];
+            Min(selectedForm.Text);
+        }
+
+        private void bringToFrontToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ListViewItem selectedForm = tasklist.SelectedItems[0];
+            BTF(selectedForm.Text);
+        }
+
+        private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ListViewItem selectedForm = tasklist.SelectedItems[0];
+            CloseFRM(selectedForm.Text);
+        }
     }
 }
