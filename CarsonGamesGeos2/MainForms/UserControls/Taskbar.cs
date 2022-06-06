@@ -11,6 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CarsonGamesGeos2.classes;
+using Timer = System.Windows.Forms.Timer;
 
 namespace CarsonGamesGeos.geos.UserControls.UI
 {
@@ -20,8 +21,10 @@ namespace CarsonGamesGeos.geos.UserControls.UI
         ToolTip tt = new ToolTip();
         CarsonGamesGeos2.Main.MainForm MainForm = (CarsonGamesGeos2.Main.MainForm)Application.OpenForms["MainForm"];
         CarsonGamesGeos2.classes.WindowControls WindowControls = new WindowControls();
+        misc Misc = new misc();
         public MenuBar()
         {
+            usermangemnt usermangemnt = new usermangemnt();
             InitializeComponent();
             timer1.Start();
             timer2.Interval = 5000;
@@ -33,6 +36,8 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             files.Click += filesToolStripMenuItem_Click;
             MainForm.Resize += MainForm_Resize;
             label2.Text = MainForm.loggedin;
+            Image img = Misc.resizeImage(101, 84, usermangemnt.GetProfilePicture(label2.Text));
+            userpicture.Image = img;
 
             
 
@@ -61,14 +66,54 @@ namespace CarsonGamesGeos.geos.UserControls.UI
         {
             if (appmenu.Visible == false)
             {
-                appmenu.BringToFront();
-                appmenu.Visible = true;
+
+                Thread t = new Thread (OpenAppMenu);
+                t.Start();
+
 
             }
             else
             {
                 appmenu.Visible = false;
             }
+        }
+        public void OpenAppMenu()
+        {
+            int gotox = 100;
+            appmenu.Invoke(new Action(delegate () { appmenu.Location = new Point(appmenu.Location.X - 100, appmenu.Location.Y); }));
+            
+            Timer timer = new Timer();
+            timer.Tick += Timer_Tick;
+            timer.Interval = 500;
+            appmenu.Invoke(new Action(delegate () {
+                appmenu.BringToFront();
+                appmenu.Visible = true;
+            }));
+
+
+
+            while (gotox > 0)
+            {
+                appmenu.Invoke(new Action(delegate () { appmenu.Location = new Point(appmenu.Location.X + 1, appmenu.Location.Y); }));
+
+
+
+               
+               gotox = gotox -1;
+
+            }
+
+
+
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Animate_Tick(object sender, EventArgs e)
+        {
         }
 
         private void MenuBar_Load(object sender, EventArgs e)
@@ -136,7 +181,7 @@ namespace CarsonGamesGeos.geos.UserControls.UI
 
         private void appmenu_Paint(object sender, PaintEventArgs e)
         {
-
+           
         }
 
         private void consoleToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -633,6 +678,16 @@ namespace CarsonGamesGeos.geos.UserControls.UI
         {
             ListViewItem selectedForm = tasklist.SelectedItems[0];
             CloseFRM(selectedForm.Text);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userpicture_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

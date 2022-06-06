@@ -32,6 +32,12 @@ namespace CarsonGamesGeos2.classes
             }
 
         }
+        public string GetProfilePicture(string user)
+        {
+            return $"users\\{ user }\\settings\\misc\\image.png";
+           
+                
+        }
 
         public Dictionary<string,string> UserList()
         {
