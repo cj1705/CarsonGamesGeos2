@@ -87,9 +87,9 @@
             this.appmenu.Controls.Add(this.button3);
             this.appmenu.Controls.Add(this.button2);
             this.appmenu.Controls.Add(this.menuStrip2);
-            this.appmenu.Location = new System.Drawing.Point(0, 3);
+            this.appmenu.Location = new System.Drawing.Point(0, 198);
             this.appmenu.Name = "appmenu";
-            this.appmenu.Size = new System.Drawing.Size(213, 289);
+            this.appmenu.Size = new System.Drawing.Size(213, 270);
             this.appmenu.TabIndex = 6;
             this.appmenu.Visible = false;
             this.appmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.appmenu_Paint);
@@ -109,7 +109,7 @@
             // button3
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button3.Location = new System.Drawing.Point(46, 258);
+            this.button3.Location = new System.Drawing.Point(46, 240);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 5;
@@ -119,12 +119,13 @@
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button2.Location = new System.Drawing.Point(131, 258);
+            this.button2.Location = new System.Drawing.Point(131, 240);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
             this.button2.Text = "Exit";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // menuStrip2
             // 
@@ -301,7 +302,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 300);
+            this.panel1.Location = new System.Drawing.Point(0, 476);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(863, 25);
             this.panel1.TabIndex = 5;
@@ -311,6 +312,7 @@
             this.tasklist.AllowColumnReorder = true;
             this.tasklist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tasklist.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tasklist.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tasklist.ForeColor = System.Drawing.Color.Black;
             this.tasklist.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.tasklist.HideSelection = false;
@@ -409,7 +411,7 @@
             this.Controls.Add(this.appmenu);
             this.Controls.Add(this.panel1);
             this.Name = "MenuBar";
-            this.Size = new System.Drawing.Size(863, 325);
+            this.Size = new System.Drawing.Size(863, 501);
             this.Load += new System.EventHandler(this.MenuBar_Load_1);
             this.appmenu.ResumeLayout(false);
             this.menuStrip2.ResumeLayout(false);
