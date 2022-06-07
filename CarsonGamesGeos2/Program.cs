@@ -27,6 +27,8 @@ namespace CarsonGamesGeos2
         [STAThread]
         static void Main(string[] args)
         {
+            Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
+
             Program pgm = new Program();
             classes.addons.addonloader addonloader = new classes.addons.addonloader();
 
@@ -58,9 +60,16 @@ namespace CarsonGamesGeos2
 
 
 
-        private static void FormedOpened_FormOpen(string obj)
+
+private static void Application_ThreadException(object sender, UnhandledExceptionEventArgs unhandledExceptionEventArgs)
         {
            
+        }
+        static void Application_ThreadException(
+        object sender, ThreadExceptionEventArgs e)
+        {
+            classes.error.error_handler error_Handler = new classes.error.error_handler();
+            error_Handler.ShowError(e.Exception);
         }
     }
 }

@@ -37,5 +37,10 @@ namespace CarsonGamesGeos2.dev.GUI.Debug_Menu
             hlp.Show();
 
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            throw new Exception("This is a test Execption");
+        }
     }
 }

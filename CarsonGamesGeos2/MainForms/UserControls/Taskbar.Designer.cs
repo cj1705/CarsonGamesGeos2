@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.appmenu = new System.Windows.Forms.Panel();
+            this.userpicture = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@
             this.Options = new System.Windows.Forms.ToolStripMenuItem();
             this.controlpanel = new System.Windows.Forms.ToolStripMenuItem();
             this.taskmanger = new System.Windows.Forms.ToolStripMenuItem();
-            this.updatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.about = new System.Windows.Forms.ToolStripMenuItem();
             this.files = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,31 +68,40 @@
             this.bringToFrontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.UpdateDesktopTimer = new System.Windows.Forms.Timer(this.components);
-            this.userpicture = new System.Windows.Forms.PictureBox();
             this.appmenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userpicture)).BeginInit();
             this.menuStrip2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userpicture)).BeginInit();
             this.SuspendLayout();
             // 
             // appmenu
             // 
             this.appmenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.appmenu.BackColor = System.Drawing.SystemColors.Info;
+            this.appmenu.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.appmenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.appmenu.Controls.Add(this.userpicture);
             this.appmenu.Controls.Add(this.label2);
             this.appmenu.Controls.Add(this.button3);
             this.appmenu.Controls.Add(this.button2);
             this.appmenu.Controls.Add(this.menuStrip2);
-            this.appmenu.Location = new System.Drawing.Point(0, 198);
+            this.appmenu.Location = new System.Drawing.Point(0, 199);
             this.appmenu.Name = "appmenu";
-            this.appmenu.Size = new System.Drawing.Size(213, 270);
+            this.appmenu.Size = new System.Drawing.Size(211, 269);
             this.appmenu.TabIndex = 6;
             this.appmenu.Visible = false;
             this.appmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.appmenu_Paint);
+            // 
+            // userpicture
+            // 
+            this.userpicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.userpicture.Location = new System.Drawing.Point(55, 16);
+            this.userpicture.Name = "userpicture";
+            this.userpicture.Size = new System.Drawing.Size(101, 84);
+            this.userpicture.TabIndex = 6;
+            this.userpicture.TabStop = false;
+            this.userpicture.Click += new System.EventHandler(this.userpicture_Click);
             // 
             // label2
             // 
@@ -100,7 +109,7 @@
             this.label2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 13);
+            this.label2.Size = new System.Drawing.Size(207, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -109,21 +118,21 @@
             // button3
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button3.Location = new System.Drawing.Point(46, 240);
+            this.button3.Location = new System.Drawing.Point(154, 211);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(52, 23);
             this.button3.TabIndex = 5;
             this.button3.Text = "Logout";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button2.Location = new System.Drawing.Point(131, 240);
+            this.button2.BackgroundImage = global::CarsonGamesGeos2.MainResources.exit;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(154, 240);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(52, 23);
             this.button2.TabIndex = 4;
-            this.button2.Text = "Exit";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
@@ -137,7 +146,7 @@
             this.apps,
             this.aboutToolStripMenuItem});
             this.menuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip2.Location = new System.Drawing.Point(82, 103);
+            this.menuStrip2.Location = new System.Drawing.Point(82, 125);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(129, 83);
             this.menuStrip2.TabIndex = 3;
@@ -148,7 +157,6 @@
             this.Options.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.controlpanel,
             this.taskmanger,
-            this.updatesToolStripMenuItem,
             this.addUsersToolStripMenuItem,
             this.about,
             this.files});
@@ -159,37 +167,31 @@
             // controlpanel
             // 
             this.controlpanel.Name = "controlpanel";
-            this.controlpanel.Size = new System.Drawing.Size(180, 22);
+            this.controlpanel.Size = new System.Drawing.Size(146, 22);
             this.controlpanel.Text = "Control Panel";
             // 
             // taskmanger
             // 
             this.taskmanger.Name = "taskmanger";
-            this.taskmanger.Size = new System.Drawing.Size(180, 22);
+            this.taskmanger.Size = new System.Drawing.Size(146, 22);
             this.taskmanger.Text = "Task Manger";
-            // 
-            // updatesToolStripMenuItem
-            // 
-            this.updatesToolStripMenuItem.Name = "updatesToolStripMenuItem";
-            this.updatesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.updatesToolStripMenuItem.Text = "Updates";
             // 
             // addUsersToolStripMenuItem
             // 
             this.addUsersToolStripMenuItem.Name = "addUsersToolStripMenuItem";
-            this.addUsersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addUsersToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.addUsersToolStripMenuItem.Text = "Add users";
             // 
             // about
             // 
             this.about.Name = "about";
-            this.about.Size = new System.Drawing.Size(180, 22);
+            this.about.Size = new System.Drawing.Size(146, 22);
             this.about.Text = "about";
             // 
             // files
             // 
             this.files.Name = "files";
-            this.files.Size = new System.Drawing.Size(180, 22);
+            this.files.Size = new System.Drawing.Size(146, 22);
             this.files.Text = "Files";
             // 
             // apps
@@ -210,7 +212,7 @@
             this.internetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem12});
             this.internetToolStripMenuItem.Name = "internetToolStripMenuItem";
-            this.internetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.internetToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.internetToolStripMenuItem.Text = "Internet";
             this.internetToolStripMenuItem.Visible = false;
             // 
@@ -223,7 +225,7 @@
             // toolStripMenuItem13
             // 
             this.toolStripMenuItem13.Name = "toolStripMenuItem13";
-            this.toolStripMenuItem13.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem13.Size = new System.Drawing.Size(158, 22);
             this.toolStripMenuItem13.Text = "Software Center";
             this.toolStripMenuItem13.Visible = false;
             // 
@@ -232,7 +234,7 @@
             this.toolStripMenuItem14.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem15});
             this.toolStripMenuItem14.Name = "toolStripMenuItem14";
-            this.toolStripMenuItem14.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(158, 22);
             this.toolStripMenuItem14.Text = "FPS";
             this.toolStripMenuItem14.Visible = false;
             // 
@@ -247,7 +249,7 @@
             this.toolStripMenuItem16.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem17});
             this.toolStripMenuItem16.Name = "toolStripMenuItem16";
-            this.toolStripMenuItem16.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem16.Size = new System.Drawing.Size(158, 22);
             this.toolStripMenuItem16.Text = "Other";
             this.toolStripMenuItem16.Visible = false;
             // 
@@ -260,13 +262,13 @@
             // paintToolStripMenuItem1
             // 
             this.paintToolStripMenuItem1.Name = "paintToolStripMenuItem1";
-            this.paintToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.paintToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
             this.paintToolStripMenuItem1.Text = "Paint";
             // 
             // consoleToolStripMenuItem1
             // 
             this.consoleToolStripMenuItem1.Name = "consoleToolStripMenuItem1";
-            this.consoleToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.consoleToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
             this.consoleToolStripMenuItem1.Text = "Console";
             // 
             // aboutToolStripMenuItem
@@ -394,16 +396,6 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
             // 
-            // userpicture
-            // 
-            this.userpicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.userpicture.Location = new System.Drawing.Point(55, 16);
-            this.userpicture.Name = "userpicture";
-            this.userpicture.Size = new System.Drawing.Size(101, 84);
-            this.userpicture.TabIndex = 6;
-            this.userpicture.TabStop = false;
-            this.userpicture.Click += new System.EventHandler(this.userpicture_Click);
-            // 
             // MenuBar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -414,12 +406,12 @@
             this.Size = new System.Drawing.Size(863, 501);
             this.Load += new System.EventHandler(this.MenuBar_Load_1);
             this.appmenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.userpicture)).EndInit();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contextMenuStrip2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.userpicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -433,7 +425,6 @@
         private System.Windows.Forms.ToolStripMenuItem Options;
         private System.Windows.Forms.ToolStripMenuItem controlpanel;
         private System.Windows.Forms.ToolStripMenuItem taskmanger;
-        private System.Windows.Forms.ToolStripMenuItem updatesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addUsersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem about;
         private System.Windows.Forms.ToolStripMenuItem files;

@@ -62,6 +62,19 @@
     <Compile Include="classes\Console\Log.cs" />
     <Compile Include="classes\CreateControl.cs" />
     <Compile Include="classes\encryption.cs" />
+    <Compile Include="classes\error\error_handler.cs" />
+    <Compile Include="classes\error\forms\error_box.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="classes\error\forms\error_box.Designer.cs">
+      <DependentUpon>error_box.cs</DependentUpon>
+    </Compile>
+    <Compile Include="classes\error\forms\more_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="classes\error\forms\more_details.Designer.cs">
+      <DependentUpon>more_details.cs</DependentUpon>
+    </Compile>
     <Compile Include="classes\File Management\File.cs" />
     <Compile Include="classes\File Management\Folders.cs" />
     <Compile Include="classes\First Time Setup.cs" />
@@ -175,6 +188,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="classes\error\forms\error_box.resx">
+      <DependentUpon>error_box.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classes\error\forms\more_details.resx">
+      <DependentUpon>more_details.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dev\GUI\Debug Menu\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +268,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\questionmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
