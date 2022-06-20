@@ -12,6 +12,8 @@ namespace CarsonGamesGeos2.MainForms.Misc_Forms.control
 {
     public partial class control : Form
     {
+        Main.MainForm MainForm = (Main.MainForm)Application.OpenForms["MainForm"];
+        classes.usermangemnt Usermangemnt = new classes.usermangemnt();
         public control()
         {
             InitializeComponent();
@@ -52,5 +54,37 @@ namespace CarsonGamesGeos2.MainForms.Misc_Forms.control
         {
 
         }
+
+        private void tabPage1_Paint(object sender, PaintEventArgs e)
+        {
+            backpanel.BackColor = Color.FromArgb(Int32.Parse(Usermangemnt.GetConfig(MainForm.loggedin, "color", "bcolor")));
+
+        }
+
+        private void backpanel_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Color color = getUserColorChoice();
+            if (color != null)
+            {
+
+                Usermangemnt.saveConfig(MainForm.loggedin, "color", "bcolor", color.ToArgb().ToString());
+            }
+        }
+        public Color getUserColorChoice()
+        {
+            if(colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                return colorDialog1.Color;
+            }
+            else
+            {
+                return backpanel.BackColor;
+            }
+        }
+
     }
 }

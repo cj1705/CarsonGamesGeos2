@@ -15,8 +15,50 @@ namespace CarsonGamesGeos2.classes
 {
     public class usermangemnt
     {
+        public string GetConfig(string a, string b, string c)
+        {
+            try
+            {
+                string usrpath = "./users/" + a + "/settings/";
+                string settingsfile = usrpath + b + ".txt";
+                config = new JavaScriptSerializer().Deserialize<Dictionary<string, string>>(File.ReadAllText(settingsfile));
+                string value = config[c];
+                return value;
+            }
+            catch (Exception e)
+            {
+              
+                return null;
+            }
+        
+        
+        }
+        public string saveConfig(string a, string b, string c, string d)
+        {
+            try
+            {
+                string usrpath = "./Users/" + a + "/settings/";
+                string settingsfile = usrpath + b + ".txt";
+                config = new JavaScriptSerializer().Deserialize<Dictionary<string, string>>(File.ReadAllText(settingsfile));
+                config[c] = d;
+                using (StreamWriter sw = new StreamWriter(settingsfile))
+                {
+
+                    sw.WriteLine(new JavaScriptSerializer().Serialize(config));
+                    sw.Dispose();
+
+                }    
+                return "OK";
+            }
+            catch (Exception e)
+            {
+               
+                return null;
+            }
+        }
         public void LoadDesktop(string user, string epass)
         {
+
             if (CheckPasswrd(user, epass))
             {
                 Main.MainForm main = (Main.MainForm)Application.OpenForms["MainForm"];
