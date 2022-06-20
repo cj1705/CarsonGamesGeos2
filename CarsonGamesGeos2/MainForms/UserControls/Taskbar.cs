@@ -33,6 +33,7 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             getOpened.Start();
             CloseOld.Start();
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
+            controlpanel.Click += Controlpanel_Click;
             files.Click += filesToolStripMenuItem_Click;
             MainForm.Resize += MainForm_Resize;
             label2.Text = MainForm.loggedin;
@@ -42,6 +43,12 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             
 
 
+        }
+
+        private void Controlpanel_Click(object sender, EventArgs e)
+        {
+            WindowControls.Open(new CarsonGamesGeos2.MainForms.Misc_Forms.control.control(), "normal");
+            Close();
         }
 
         private void MainForm_Resize(object sender, EventArgs e)
@@ -195,8 +202,7 @@ namespace CarsonGamesGeos.geos.UserControls.UI
         private void controlpanel_Click(object sender, EventArgs e)
         {
 
-           // Program.MainFrm.OpenForm(new control(), "Normal");
-            Close();
+          
         }
         public void Close()
         {
@@ -694,6 +700,11 @@ namespace CarsonGamesGeos.geos.UserControls.UI
         private void button2_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void menuStrip2_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

@@ -146,11 +146,12 @@
             this.apps,
             this.aboutToolStripMenuItem});
             this.menuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip2.Location = new System.Drawing.Point(82, 125);
+            this.menuStrip2.Location = new System.Drawing.Point(82, 136);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(129, 83);
             this.menuStrip2.TabIndex = 3;
             this.menuStrip2.Text = "menuStrip2";
+            this.menuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip2_ItemClicked_1);
             // 
             // Options
             // 
@@ -276,6 +277,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Visible = false;
             // 
             // timer1
             // 

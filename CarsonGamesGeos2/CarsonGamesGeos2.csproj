@@ -124,6 +124,12 @@
     <Compile Include="MainForms\Misc Forms\about\about.Designer.cs">
       <DependentUpon>about.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForms\Misc Forms\control\control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Misc Forms\control\control.Designer.cs">
+      <DependentUpon>control.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForms\Misc Forms\fts\formcontrol.cs" />
     <Compile Include="MainForms\Misc Forms\fts\forms\beforewecontinue.cs">
       <SubType>Form</SubType>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\Misc Forms\about\about.resx">
       <DependentUpon>about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Misc Forms\control\control.resx">
+      <DependentUpon>control.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\Misc Forms\fts\forms\beforewecontinue.resx">
       <DependentUpon>beforewecontinue.cs</DependentUpon>

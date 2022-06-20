@@ -27,19 +27,19 @@ namespace CarsonGamesGeos2
         [STAThread]
         static void Main(string[] args)
         {
-            Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
-
+            Application.ThreadException += new ThreadExceptionEventHandler(CritialExeption);
+            AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CriticalExeption2);
             Program pgm = new Program();
             classes.addons.addonloader addonloader = new classes.addons.addonloader();
 
-           Thread addons = new Thread(addonloader.LoadAddons);
+            Thread addons = new Thread(addonloader.LoadAddons);
             addons.Start();
 
 
 #if DEBUG
 
             dev.debug debug = new dev.debug();
-          debug.StartDebug();
+            debug.StartDebug();
 
 
 
@@ -60,16 +60,15 @@ namespace CarsonGamesGeos2
 
 
 
-
-private static void Application_ThreadException(object sender, UnhandledExceptionEventArgs unhandledExceptionEventArgs)
-        {
-           
-        }
-        static void Application_ThreadException(
-        object sender, ThreadExceptionEventArgs e)
+        public static void CritialExeption(object sender, ThreadExceptionEventArgs t)
         {
             classes.error.error_handler error_Handler = new classes.error.error_handler();
-            error_Handler.ShowError(e.Exception);
+            error_Handler.ShowError(t.Exception);
+        }
+        private static void CriticalExeption2(object sender, UnhandledExceptionEventArgs e)
+        {
+
         }
     }
+       
 }
