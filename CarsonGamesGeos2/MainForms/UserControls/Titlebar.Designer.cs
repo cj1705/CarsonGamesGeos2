@@ -72,9 +72,9 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             this.xbutton.BackgroundImage = global::CarsonGamesGeos2.MainResources.Geos_X;
             this.xbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.xbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.xbutton.Location = new System.Drawing.Point(699, 3);
+            this.xbutton.Location = new System.Drawing.Point(700, 3);
             this.xbutton.Name = "xbutton";
-            this.xbutton.Size = new System.Drawing.Size(29, 28);
+            this.xbutton.Size = new System.Drawing.Size(22, 28);
             this.xbutton.TabIndex = 18;
             this.xbutton.UseVisualStyleBackColor = true;
             this.xbutton.Click += new System.EventHandler(this.xbutton_Click);
@@ -88,9 +88,9 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             this.minbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.minbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minbutton.ForeColor = System.Drawing.SystemColors.Control;
-            this.minbutton.Location = new System.Drawing.Point(673, 9);
+            this.minbutton.Location = new System.Drawing.Point(675, 8);
             this.minbutton.Name = "minbutton";
-            this.minbutton.Size = new System.Drawing.Size(33, 18);
+            this.minbutton.Size = new System.Drawing.Size(19, 18);
             this.minbutton.TabIndex = 7;
             this.minbutton.Text = "-";
             this.minbutton.UseVisualStyleBackColor = false;

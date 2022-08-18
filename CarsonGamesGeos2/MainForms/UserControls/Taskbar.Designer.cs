@@ -300,12 +300,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.tasklist);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 476);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(863, 25);
@@ -320,12 +321,12 @@
             this.tasklist.ForeColor = System.Drawing.Color.Black;
             this.tasklist.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.tasklist.HideSelection = false;
-            this.tasklist.Location = new System.Drawing.Point(88, -3);
+            this.tasklist.Location = new System.Drawing.Point(88, -2);
             this.tasklist.MultiSelect = false;
             this.tasklist.Name = "tasklist";
             this.tasklist.Scrollable = false;
             this.tasklist.ShowGroups = false;
-            this.tasklist.Size = new System.Drawing.Size(609, 25);
+            this.tasklist.Size = new System.Drawing.Size(611, 25);
             this.tasklist.TabIndex = 4;
             this.tasklist.TabStop = false;
             this.tasklist.UseCompatibleStateImageBehavior = false;
@@ -336,7 +337,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox1.Location = new System.Drawing.Point(715, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(717, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 22);
             this.pictureBox1.TabIndex = 6;
@@ -348,7 +349,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(777, 3);
+            this.label1.Location = new System.Drawing.Point(779, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 16);
             this.label1.TabIndex = 2;
@@ -366,6 +367,10 @@
             // getOpened
             // 
             this.getOpened.Tick += new System.EventHandler(this.getOpened_Tick);
+            // 
+            // CloseOld
+            // 
+            this.CloseOld.Tick += new System.EventHandler(this.CloseOld_Tick_1);
             // 
             // contextMenuStrip2
             // 

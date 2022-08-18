@@ -67,7 +67,8 @@ namespace CarsonGamesGeos2
         }
         private static void CriticalExeption2(object sender, UnhandledExceptionEventArgs e)
         {
-
+            classes.error.error_handler error_Handler = new classes.error.error_handler();
+            error_Handler.ShowError(e.ExceptionObject as Exception);
         }
     }
        

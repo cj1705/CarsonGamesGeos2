@@ -40,6 +40,13 @@ namespace CarsonGamesGeos2.dev.GUI.Debug_Menu
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            throw new Exception("A");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            throw new Exception("TEST_FATAL");
+
         }
     }
 }

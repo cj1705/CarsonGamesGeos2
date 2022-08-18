@@ -34,6 +34,14 @@ namespace CarsonGamesGeos2.classes
             loading.Close();
 
         }
+        public Point getCenterForm(Form form)
+        {
+            int W = form.ClientSize.Width / 2;
+            int H = form.ClientSize.Height / 2;
+            return new Point(W, H);
+ 
+        }
+
         public void Open(Form form, string size)
         {
             try

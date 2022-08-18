@@ -50,23 +50,7 @@ namespace CarsonGamesGeos2.Main
             }
 
         }
-        public void OpenForm(Form a)
-        {
-           
-                try
-                {
-        
-                  
-                       
-                    
-                }
-                catch (Exception ex)
-                {
-
-                }
-            
-            
-        }
+     
 
         private void MainForm_PaddingChanged(object sender, EventArgs e)
         {

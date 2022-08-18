@@ -706,5 +706,22 @@ namespace CarsonGamesGeos.geos.UserControls.UI
         {
 
         }
+
+        private void CloseOld_Tick_1(object sender, EventArgs e)
+        {
+            foreach (string formtxt in ConvertToArray(tasklist))
+            {
+
+                ListViewItem formname = tasklist.FindItemWithText(formtxt);
+
+                Form form = Application.OpenForms[formtxt];
+                if (form == null)
+                {
+                    tasklist.Items.Remove(formname);
+                }
+
+            }
+        }
     }
-}
+    }
+

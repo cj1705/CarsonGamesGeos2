@@ -60,7 +60,7 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             int frmwidth = Parrentfrm().Width;
             //label4.Left = frmwidth - 400;
             xbutton.Left = frmwidth - 25;
-            minbutton.Left = xbutton.Left - 50;
+            minbutton.Left = xbutton.Left - 25;
             Parrentfrm().Paint += Titlebar_Paint1;
             
         }

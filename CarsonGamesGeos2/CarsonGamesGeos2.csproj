@@ -69,6 +69,12 @@
     <Compile Include="classes\error\forms\error_box.Designer.cs">
       <DependentUpon>error_box.cs</DependentUpon>
     </Compile>
+    <Compile Include="classes\error\forms\Fatal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="classes\error\forms\Fatal.Designer.cs">
+      <DependentUpon>Fatal.cs</DependentUpon>
+    </Compile>
     <Compile Include="classes\error\forms\more_details.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
   <ItemGroup>
     <EmbeddedResource Include="classes\error\forms\error_box.resx">
       <DependentUpon>error_box.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classes\error\forms\Fatal.resx">
+      <DependentUpon>Fatal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="classes\error\forms\more_details.resx">
       <DependentUpon>more_details.cs</DependentUpon>
