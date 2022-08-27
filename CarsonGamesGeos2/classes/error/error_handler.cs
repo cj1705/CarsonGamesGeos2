@@ -10,13 +10,16 @@ namespace CarsonGamesGeos2.classes.error
 {
     public class error_handler
     {
+        Exception a = null;
         public void ShowError(Exception e)
         {
             try
             {
                 if(e.Message == "TEST_FATAL")
                 {
-                    throw new Exception(e.StackTrace);
+
+                  a=  new AggregateException();
+                    throw a;
                 }
                 Main.MainForm main = (Main.MainForm)Application.OpenForms["MainForm"];
 
@@ -29,7 +32,7 @@ namespace CarsonGamesGeos2.classes.error
                 error.Location = new Point(main.Width / 2 - error.Width / 2, main.Height / 2 - error.Height / 2);
             }
             catch(Exception ea)
-            {
+            { 
                 Fatal(ea);
             }
 
@@ -39,14 +42,14 @@ namespace CarsonGamesGeos2.classes.error
         {
             Main.MainForm main = (Main.MainForm)Application.OpenForms["MainForm"];
            
-            Form a = new forms.Fatal();
-            a.TopLevel = false;
-            a.Parent = main;
-           
-            a.Size = main.ClientSize;
+            Form err = new forms.Fatal(a);
+            err.TopLevel = false;
+            err.Parent = main;
 
-            a.TopMost = true;
-            a.Show();
+            err.Size = main.ClientSize;
+
+            err.TopMost = true;
+            err.Show();
 
         }
     }

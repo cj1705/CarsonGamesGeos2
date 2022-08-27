@@ -31,20 +31,23 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.appearance = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.titlebar1 = new CarsonGamesGeos.geos.UserControls.UI.Titlebar();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.versionstring = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.backcolorbtn = new System.Windows.Forms.Button();
             this.backpanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.backcolorbtn = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.versionstring = new System.Windows.Forms.Label();
+            this.titlebar1 = new CarsonGamesGeos.geos.UserControls.UI.Titlebar();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.appearance.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBox1
@@ -55,7 +58,7 @@
             this.listBox1.Items.AddRange(new object[] {
             "appearance",
             "about"});
-            this.listBox1.Location = new System.Drawing.Point(0, 33);
+            this.listBox1.Location = new System.Drawing.Point(0, 31);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(178, 304);
             this.listBox1.TabIndex = 0;
@@ -66,7 +69,7 @@
             this.tabControl1.Controls.Add(this.appearance);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(161, 4);
+            this.tabControl1.Location = new System.Drawing.Point(161, 11);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(316, 313);
@@ -78,65 +81,25 @@
             this.appearance.Controls.Add(this.backcolorbtn);
             this.appearance.Controls.Add(this.backpanel);
             this.appearance.Controls.Add(this.label2);
-            this.appearance.Location = new System.Drawing.Point(4, 25);
+            this.appearance.Location = new System.Drawing.Point(4, 22);
             this.appearance.Name = "appearance";
             this.appearance.Padding = new System.Windows.Forms.Padding(3);
-            this.appearance.Size = new System.Drawing.Size(308, 284);
+            this.appearance.Size = new System.Drawing.Size(308, 287);
             this.appearance.TabIndex = 0;
             this.appearance.Text = "1";
             this.appearance.UseVisualStyleBackColor = true;
             this.appearance.Click += new System.EventHandler(this.tabPage1_Click);
             this.appearance.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage1_Paint);
             // 
-            // tabPage2
+            // backcolorbtn
             // 
-            this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(308, 276);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // titlebar1
-            // 
-            this.titlebar1.Location = new System.Drawing.Point(0, 0);
-            this.titlebar1.Name = "titlebar1";
-            this.titlebar1.Size = new System.Drawing.Size(732, 32);
-            this.titlebar1.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CarsonGamesGeos2.MainResources.CGGeosLogo2;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(224, 126);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // versionstring
-            // 
-            this.versionstring.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.versionstring.Location = new System.Drawing.Point(3, 156);
-            this.versionstring.Name = "versionstring";
-            this.versionstring.Size = new System.Drawing.Size(252, 13);
-            this.versionstring.TabIndex = 2;
-            this.versionstring.Text = "aa";
-            this.versionstring.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.versionstring);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(18, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(258, 172);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.backcolorbtn.Location = new System.Drawing.Point(205, 7);
+            this.backcolorbtn.Name = "backcolorbtn";
+            this.backcolorbtn.Size = new System.Drawing.Size(75, 23);
+            this.backcolorbtn.TabIndex = 4;
+            this.backcolorbtn.Text = "Change";
+            this.backcolorbtn.UseVisualStyleBackColor = true;
+            this.backcolorbtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // backpanel
             // 
@@ -154,15 +117,75 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Current background color";
             // 
-            // backcolorbtn
+            // tabPage2
             // 
-            this.backcolorbtn.Location = new System.Drawing.Point(205, 7);
-            this.backcolorbtn.Name = "backcolorbtn";
-            this.backcolorbtn.Size = new System.Drawing.Size(75, 23);
-            this.backcolorbtn.TabIndex = 4;
-            this.backcolorbtn.Text = "Change";
-            this.backcolorbtn.UseVisualStyleBackColor = true;
-            this.backcolorbtn.Click += new System.EventHandler(this.button1_Click);
+            this.tabPage2.Controls.Add(this.tabControl2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(308, 287);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.versionstring);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Location = new System.Drawing.Point(15, 19);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(257, 149);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // versionstring
+            // 
+            this.versionstring.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.versionstring.Location = new System.Drawing.Point(3, 133);
+            this.versionstring.Name = "versionstring";
+            this.versionstring.Size = new System.Drawing.Size(251, 13);
+            this.versionstring.TabIndex = 2;
+            this.versionstring.Text = "aa";
+            this.versionstring.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // titlebar1
+            // 
+            this.titlebar1.Location = new System.Drawing.Point(0, 0);
+            this.titlebar1.Name = "titlebar1";
+            this.titlebar1.Size = new System.Drawing.Size(490, 32);
+            this.titlebar1.TabIndex = 2;
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.tabPage1);
+            this.tabControl2.Controls.Add(this.tabPage3);
+            this.tabControl2.Location = new System.Drawing.Point(0, 0);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(312, 284);
+            this.tabControl2.TabIndex = 5;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(304, 258);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(192, 74);
+            this.tabPage3.TabIndex = 1;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // control
             // 
@@ -179,8 +202,9 @@
             this.appearance.ResumeLayout(false);
             this.appearance.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -193,11 +217,13 @@
         private System.Windows.Forms.TabPage tabPage2;
         private CarsonGamesGeos.geos.UserControls.UI.Titlebar titlebar1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label versionstring;
         private System.Windows.Forms.Button backcolorbtn;
         private System.Windows.Forms.Panel backpanel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }

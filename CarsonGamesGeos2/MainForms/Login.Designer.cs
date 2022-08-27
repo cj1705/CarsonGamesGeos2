@@ -46,7 +46,7 @@
             // 
             this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.listView1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.listView1.BackColor = System.Drawing.SystemColors.ControlText;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(0, 100);
             this.listView1.Name = "listView1";

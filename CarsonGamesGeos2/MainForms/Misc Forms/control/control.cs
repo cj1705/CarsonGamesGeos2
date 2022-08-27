@@ -85,6 +85,5 @@ namespace CarsonGamesGeos2.MainForms.Misc_Forms.control
                 return backpanel.BackColor;
             }
         }
-
     }
 }

@@ -13,15 +13,34 @@ namespace CarsonGamesGeos2.classes.error.forms
 {
     public partial class Fatal : Form
     {
-        public Fatal()
+        
+
+        public Fatal(Exception a)
         {
             InitializeComponent();
+            MainErr = a;
+          
+        }
+        Exception MainErr;
+        private void Fatal_Load(object sender, EventArgs e)
+        {
+            Main.MainForm mainForm = (Main.MainForm)Application.OpenForms["MainForm"];
+            mainForm.Resize += MainForm_Resize;
+            richTextBox1.Text = MainErr.StackTrace;
+            richTextBox1.AppendText("\n\n " + MainErr.Source);
+            var assemblies = AppDomain.CurrentDomain.GetAssemblies();
+            foreach (var assembly in assemblies)
+            {
+                richTextBox1.AppendText("\n\n" + assembly.GetName() + " " + assembly.Location);
+            }
           
         }
 
-        private void Fatal_Load(object sender, EventArgs e)
+        private void MainForm_Resize(object sender, EventArgs e)
         {
-           
+            Main.MainForm main = (Main.MainForm)Application.OpenForms["MainForm"];
+
+            this.Size = main.ClientSize;
         }
 
         private void Fatal_Shown(object sender, EventArgs e)
@@ -43,6 +62,16 @@ namespace CarsonGamesGeos2.classes.error.forms
             {
                 MessageBox.Show(ee.Message);
             }
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
