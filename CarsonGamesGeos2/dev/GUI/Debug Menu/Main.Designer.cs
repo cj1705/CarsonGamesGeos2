@@ -30,8 +30,8 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.titlebar1 = new CarsonGamesGeos.geos.UserControls.UI.Titlebar();
             this.button3 = new System.Windows.Forms.Button();
+            this.titlebar1 = new CarsonGamesGeos.geos.UserControls.UI.Titlebar();
             this.SuspendLayout();
             // 
             // button1
@@ -54,13 +54,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // titlebar1
-            // 
-            this.titlebar1.Location = new System.Drawing.Point(0, 0);
-            this.titlebar1.Name = "titlebar1";
-            this.titlebar1.Size = new System.Drawing.Size(366, 32);
-            this.titlebar1.TabIndex = 2;
-            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(135, 79);
@@ -70,6 +63,13 @@
             this.button3.Text = "Fatal";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // titlebar1
+            // 
+            this.titlebar1.Location = new System.Drawing.Point(0, 0);
+            this.titlebar1.Name = "titlebar1";
+            this.titlebar1.Size = new System.Drawing.Size(376, 32);
+            this.titlebar1.TabIndex = 2;
             // 
             // Main
             // 

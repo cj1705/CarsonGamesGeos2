@@ -89,6 +89,12 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             Form frm = this.FindForm();
             flatLabel1.Text = "Closing - " + frm.Name;
             frm.Close();
+            
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)

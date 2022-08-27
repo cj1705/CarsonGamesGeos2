@@ -37,7 +37,15 @@ namespace CarsonGamesGeos2.classes.error
         }
         public void Fatal(Exception e)
         {
+            Main.MainForm main = (Main.MainForm)Application.OpenForms["MainForm"];
+           
             Form a = new forms.Fatal();
+            a.TopLevel = false;
+            a.Parent = main;
+           
+            a.Size = main.ClientSize;
+
+            a.TopMost = true;
             a.Show();
 
         }
