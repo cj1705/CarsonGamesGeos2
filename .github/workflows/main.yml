@@ -1,38 +1,3 @@
-
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@cj1705
-cj1705 /
-Windows11Deployer
-Public
-
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-
-    Settings
-
-CI CI #3
-
-Summary
-
-    Usage
-    Workflow file
-
-Jobs
-
-    build
-
-Workflow file for this run
-.github/workflows/main.yml at 1403ebe
 # This is a basic workflow to help you get started with Actions
 
 name: CI
