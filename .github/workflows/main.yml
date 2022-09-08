@@ -38,13 +38,14 @@ jobs:
         run: msbuild CarsonGamesGeos2.sln 
         
       - uses: actions/checkout@v2
-      - uses: CupOfTea696/gh-action-auto-release@v1.0.0
+      - uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          title: "Release: $version"
-          tag: "v$semver"
-          draft: false
-          regex: "/^Release: #{semver}$/i"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            LICENSE.txt
+            /bin/Debug/CarsonGamesGeos2.exe
        
      
