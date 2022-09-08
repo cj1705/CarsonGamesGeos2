@@ -24,9 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
-      - name: Automatic Releases
-        uses: marvinpinto/action-automatic-releases@v1.2.1
+
 
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.1
@@ -39,10 +37,10 @@ jobs:
       - name: Build
         run: msbuild CarsonGamesGeos2.sln 
         
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v1.0.0
+      - uses: actions/checkout@v2
+      - uses: vimtor/action-zip@v1
         with:
-         name: published_webapp
-         path: bin\Release\Debug
+          files: bin/Debug/
+          dest: result.zip
        
      
