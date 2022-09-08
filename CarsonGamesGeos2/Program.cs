@@ -23,6 +23,7 @@ namespace CarsonGamesGeos2
         const int SW_HIDE = 0;
         const int SW_SHOW = 5;
         public string versionstring = " ";
+       
 
         [STAThread]
         static void Main(string[] args)
