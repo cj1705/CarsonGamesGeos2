@@ -38,9 +38,13 @@ jobs:
         run: msbuild CarsonGamesGeos2.sln 
         
       - uses: actions/checkout@v2
-      - uses: vimtor/action-zip@v1
+      - uses: CupOfTea696/gh-action-auto-release@v1.0.0
         with:
-          files: bin/Debug/
-          dest: result.zip
+          title: "Release: $version"
+          tag: "v$semver"
+          draft: false
+          regex: "/^Release: #{semver}$/i"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
        
      
