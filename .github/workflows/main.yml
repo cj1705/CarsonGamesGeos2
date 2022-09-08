@@ -46,6 +46,6 @@ jobs:
           title: "Development Build"
           files: |
             LICENSE.txt
-            bin/Debug/CarsonGamesGeos2.exe
+            bin\Debug\CarsonGamesGeos2.exe
        
      
