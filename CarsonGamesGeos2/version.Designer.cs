@@ -46,5 +46,17 @@ namespace CarsonGamesGeos2 {
                 this["norm"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public string id {
+            get {
+                return ((string)(this["id"]));
+            }
+            set {
+                this["id"] = value;
+            }
+        }
     }
 }

@@ -8,5 +8,8 @@
     <Setting Name="norm" Type="System.String" Scope="User">
       <Value Profile="(Default)">N/A</Value>
     </Setting>
+    <Setting Name="id" Type="System.String" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
