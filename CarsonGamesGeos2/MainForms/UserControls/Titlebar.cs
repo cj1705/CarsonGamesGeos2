@@ -69,7 +69,7 @@ namespace CarsonGamesGeos.geos.UserControls.UI
         {
             try
             {
-                ControlPaint.DrawBorder(e.Graphics, this.Parrentfrm().ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+                ControlPaint.DrawBorder(e.Graphics, this.Parrentfrm().ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
             }
             catch (Exception)
             {

@@ -48,5 +48,12 @@ namespace CarsonGamesGeos2.dev.GUI.Debug_Menu
             throw new Exception("TEST_FATAL");
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MainForms.console console = new MainForms.console();
+            WindowControls.Open(console,"normal");
+        }
     }
+    
 }

@@ -9,19 +9,20 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>CarsonGamesGeos2</RootNamespace>
     <AssemblyName>CarsonGamesGeos2</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>bin\Debug\geos\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -38,7 +39,16 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Normal|AnyCPU'">
     <OutputPath>bin\Normal\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ConsoleControl">
+      <HintPath>C:\Users\Carson\Downloads\consolecontrol-master\consolecontrol-master\source\ConsoleControl\bin\Debug\net48\ConsoleControl.dll</HintPath>
+    </Reference>
+    <Reference Include="ConsoleControlAPI">
+      <HintPath>C:\Users\Carson\Downloads\consolecontrol-master\consolecontrol-master\source\ConsoleControlAPI\bin\Debug\net472\ConsoleControlAPI.dll</HintPath>
+    </Reference>
     <Reference Include="FlatUI">
       <HintPath>DLLS\FlatUI.dll</HintPath>
     </Reference>
@@ -92,6 +102,7 @@
     <Compile Include="classes\First Time Setup.cs" />
     <Compile Include="classes\getForms.cs" />
     <Compile Include="classes\GitHubProject.cs" />
+    <Compile Include="classes\info.cs" />
     <Compile Include="classes\misc.cs" />
     <Compile Include="classes\updates\check.cs" />
     <Compile Include="classes\usermangemnt.cs" />
@@ -175,6 +186,12 @@
     <Compile Include="MainForms\Misc Forms\Loading\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForms\console.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\console.Designer.cs">
+      <DependentUpon>console.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForms\UserControls\Taskbar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -223,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="hlp\help.resx">
       <DependentUpon>help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\console.resx">
+      <DependentUpon>console.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -299,11 +319,27 @@
   <ItemGroup>
     <None Include="Resources\exit.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Console.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>mkdir "$(TargetDir)\geos\"
 copy /B /Y "$(TargetDir)*.dll" "$(TargetDir)geos\"
-del "$(TargetDir)*.dll"</PostBuildEvent>
+del "$(TargetDir)*.dll"
+SET folder="%25CD%25\..
+
+echo Set oWS = WScript.CreateObject("WScript.Shell") &gt;%25folder%25\CreateShortcut.vbs
+echo Set fso = CreateObject("Scripting.FileSystemObject") &gt;&gt; %25folder%25\CreateShortcut.vbs
+echo sLinkFile = "Start CarsonGamesGeos2.lnk" &gt;&gt;%25folder%25\CreateShortcut.vbs
+echo Set oLink = oWS.CreateShortcut(sLinkFile) &gt;&gt; %25folder%25\CreateShortcut.vbs
+echo oLink.WorkingDirectory =oWS.CurrentDirectory &gt;&gt; %25folder%25\CreateShortcut.vbs
+
+echo oLink.TargetPath = oWS.CurrentDirectory+"\geos\CarsonGamesGeos2.exe" &gt;&gt;%25folder%25\CreateShortcut.vbs
+
+echo oLink.Save &gt;&gt;%25folder%25\CreateShortcut.vbs
+
+copy  "H:\VS stuff\Projects\CarsonGamesConsole\CarsonGamesOSCONSOLE\bin\Debug\CGConsole.exe"  %25folder%25\geos</PostBuildEvent>
   </PropertyGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
