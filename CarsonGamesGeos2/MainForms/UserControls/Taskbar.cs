@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net.NetworkInformation;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -17,6 +19,11 @@ namespace CarsonGamesGeos.geos.UserControls.UI
 {
     public partial class MenuBar : UserControl
     {
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+
+        static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
+        [DllImport("USER32.DLL")]
+        public static extern int SetWindowLong(IntPtr hWnd, int nIndex, UInt32 dwNewLong);
         private const string V = "MainForm";
         ToolTip tt = new ToolTip();
         CarsonGamesGeos2.Main.MainForm MainForm = (CarsonGamesGeos2.Main.MainForm)Application.OpenForms["MainForm"];
@@ -39,10 +46,41 @@ namespace CarsonGamesGeos.geos.UserControls.UI
             label2.Text = MainForm.loggedin;
             Image img = Misc.resizeImage(101, 84, usermangemnt.GetProfilePicture(label2.Text));
             userpicture.Image = img;
+            foreach(string file in Directory.GetFiles("geos/"))
+            {
+                if (file.EndsWith(".exe"))
+                {
+                    ToolStripItem app = new ToolStripMenuItem();
+                    app.Text = Path.GetFileName(file);
+                    app.Click += ConsoleApp_Click;
+                    consoleAppsToolStripMenuItem.DropDownItems.Add(app);
+                     
+                }
+            }
 
             
 
 
+        }
+
+        private void ConsoleApp_Click(object sender, EventArgs e)
+        {
+            var app = sender as ToolStripItem;
+            if (app != null)
+            {
+                if (app.Text == "cmd.exe")
+                {
+                    WindowControls.OpenConsole(app.Text);
+
+                }
+                else
+                {
+                    WindowControls.OpenConsole("geos/" + app.Text);
+                }
+
+
+            }
+            
         }
 
         private void Controlpanel_Click(object sender, EventArgs e)
@@ -722,6 +760,42 @@ namespace CarsonGamesGeos.geos.UserControls.UI
 
             }
         }
+
+        private void Options_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void consoleAppsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void notepadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process proc = Process.Start("notepad.exe"); 
+         //   proc.WaitForInputIdle();
+
+            while (proc.MainWindowHandle == IntPtr.Zero)
+            {
+                Thread.Sleep(100);
+                proc.Refresh();
+            }
+            CarsonGamesGeos2.MainForms.ExternalApp externalApp = new CarsonGamesGeos2.MainForms.ExternalApp();
+            WindowControls.Open(externalApp,"normal");
+            const int GWL_STYLE = (-16);
+            const UInt32 WS_VISIBLE = 0x10000000;
+            SetParent(proc.MainWindowHandle, externalApp.Handle);
+            SetWindowLong(proc.Handle, GWL_STYLE, (WS_VISIBLE));
+
+
+        }                                              //
+
+        private void cmdexeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
+    
 

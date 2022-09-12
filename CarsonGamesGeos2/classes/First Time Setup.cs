@@ -21,6 +21,8 @@ namespace CarsonGamesGeos2.classes
             loading.status.Text = $"{prefix} Creating Folders";
             if (!Folders.CheckForFolder("./settings"))
                 Folders.CreateFolder("./settings");
+            if (!Folders.CheckForFolder("./apps"))
+                Folders.CreateFolder("./settings");
             if (!Folders.CheckForFolder("./settings/users"))
             {
                 Folders.CreateFolder("./settings/users");

@@ -68,6 +68,10 @@
             this.bringToFrontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.UpdateDesktopTimer = new System.Windows.Forms.Timer(this.components);
+            this.consoleAppsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.windowsGUIAppsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notepadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmdexeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.appmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).BeginInit();
             this.menuStrip2.SuspendLayout();
@@ -146,9 +150,9 @@
             this.apps,
             this.aboutToolStripMenuItem});
             this.menuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip2.Location = new System.Drawing.Point(82, 136);
+            this.menuStrip2.Location = new System.Drawing.Point(36, 103);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(129, 83);
+            this.menuStrip2.Size = new System.Drawing.Size(135, 148);
             this.menuStrip2.TabIndex = 3;
             this.menuStrip2.Text = "menuStrip2";
             this.menuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip2_ItemClicked_1);
@@ -162,8 +166,9 @@
             this.about,
             this.files});
             this.Options.Name = "Options";
-            this.Options.Size = new System.Drawing.Size(122, 19);
+            this.Options.Size = new System.Drawing.Size(128, 19);
             this.Options.Text = "Settings";
+            this.Options.Click += new System.EventHandler(this.Options_Click_1);
             // 
             // controlpanel
             // 
@@ -198,6 +203,8 @@
             // apps
             // 
             this.apps.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consoleAppsToolStripMenuItem,
+            this.windowsGUIAppsToolStripMenuItem,
             this.internetToolStripMenuItem,
             this.toolStripMenuItem13,
             this.toolStripMenuItem14,
@@ -205,7 +212,7 @@
             this.paintToolStripMenuItem1,
             this.consoleToolStripMenuItem1});
             this.apps.Name = "apps";
-            this.apps.Size = new System.Drawing.Size(122, 19);
+            this.apps.Size = new System.Drawing.Size(128, 19);
             this.apps.Text = "Apps";
             // 
             // internetToolStripMenuItem
@@ -403,6 +410,39 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
             // 
+            // consoleAppsToolStripMenuItem
+            // 
+            this.consoleAppsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmdexeToolStripMenuItem});
+            this.consoleAppsToolStripMenuItem.Name = "consoleAppsToolStripMenuItem";
+            this.consoleAppsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consoleAppsToolStripMenuItem.Text = "ConsoleApps";
+            this.consoleAppsToolStripMenuItem.Click += new System.EventHandler(this.consoleAppsToolStripMenuItem_Click);
+            // 
+            // windowsGUIAppsToolStripMenuItem
+            // 
+            this.windowsGUIAppsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.notepadToolStripMenuItem});
+            this.windowsGUIAppsToolStripMenuItem.Enabled = false;
+            this.windowsGUIAppsToolStripMenuItem.Name = "windowsGUIAppsToolStripMenuItem";
+            this.windowsGUIAppsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.windowsGUIAppsToolStripMenuItem.Text = "Windows GUI Apps";
+            this.windowsGUIAppsToolStripMenuItem.Visible = false;
+            // 
+            // notepadToolStripMenuItem
+            // 
+            this.notepadToolStripMenuItem.Name = "notepadToolStripMenuItem";
+            this.notepadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.notepadToolStripMenuItem.Text = "Notepad";
+            this.notepadToolStripMenuItem.Click += new System.EventHandler(this.notepadToolStripMenuItem_Click);
+            // 
+            // cmdexeToolStripMenuItem
+            // 
+            this.cmdexeToolStripMenuItem.Name = "cmdexeToolStripMenuItem";
+            this.cmdexeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cmdexeToolStripMenuItem.Text = "cmd.exe";
+            this.cmdexeToolStripMenuItem.Click += new System.EventHandler(this.cmdexeToolStripMenuItem_Click);
+            // 
             // MenuBar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,5 +503,9 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         public System.Windows.Forms.Timer UpdateDesktopTimer;
         public System.Windows.Forms.PictureBox userpicture;
+        private System.Windows.Forms.ToolStripMenuItem consoleAppsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem windowsGUIAppsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem notepadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cmdexeToolStripMenuItem;
     }
 }

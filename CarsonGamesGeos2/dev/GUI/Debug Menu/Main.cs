@@ -51,7 +51,7 @@ namespace CarsonGamesGeos2.dev.GUI.Debug_Menu
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MainForms.console console = new MainForms.console();
+            MainForms.console console = new MainForms.console("cmd.exe");
             WindowControls.Open(console,"normal");
         }
     }

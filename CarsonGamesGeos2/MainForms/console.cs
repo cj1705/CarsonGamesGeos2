@@ -13,10 +13,12 @@ namespace CarsonGamesGeos2.MainForms
 {
     public partial class console : Form
     {
+        string apptorun;
 
-        public console()
+        public console(string app)
         {
             InitializeComponent();
+            apptorun = app;
         }
 
         private void consoleControl1_Load(object sender, EventArgs e)
@@ -56,8 +58,12 @@ namespace CarsonGamesGeos2.MainForms
         private void consoleControl1_Load_2(object sender, EventArgs e)
         {
             ProcessStartInfo processStartInfo = new ProcessStartInfo();
-            processStartInfo.FileName = "geos/CGConsole.exe";
+            processStartInfo.FileName = apptorun;
+            
             consoleControl1.StartProcess(processStartInfo);
+          
+           
+            
         }
     }
 }

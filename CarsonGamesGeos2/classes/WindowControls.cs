@@ -41,6 +41,22 @@ namespace CarsonGamesGeos2.classes
             return new Point(W, H);
  
         }
+        public void OpenConsole(string app)
+        {
+            Main.MainForm main = (Main.MainForm)Application.OpenForms["MainForm"];
+
+            Form form = new CarsonGamesGeos2.MainForms.console(app);
+
+            form.TopLevel = false;
+            form.Parent = main;
+
+           
+            form.Show();
+            form.BringToFront();
+
+            form.StartPosition = FormStartPosition.CenterScreen;
+       
+    }
 
         public void Open(Form form, string size)
         {
